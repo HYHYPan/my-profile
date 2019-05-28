@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header>
-      <NavBar></NavBar> 
-    </header>
+    <!-- header -->
+      <NavBar/>
 
+<!-- main contents -->
     <main role="main ">
       <div id="bigBanner">
         <div class="bigBanner-inner">
@@ -229,14 +229,14 @@
       <!-- /.container -->
 
       <!-- FOOTER -->
-      <Footer></Footer>
+      <Footer/>
     </main>
   </div>
 </template>
 
 <script>
-import NavBar from "./NavBar";
-import Footer from "./footer";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/footer";
 
 export default {
   name: "Home",
@@ -255,3 +255,7 @@ export default {
   }
 };
 </script>
+
+
+
+

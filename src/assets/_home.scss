@@ -10,12 +10,7 @@ body {
   color: #5a5a5a;
 }
 
-.header-logo-wrapper .logo #big-logo{
-  width:20px;
-  height:20px;
-  border: 2px solid whitesmoke;
-border-radius: 80px;
-}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -28,7 +23,6 @@ border-radius: 80px;
 /* Declare heights because of positioning of img element */
 .bigBanner-inner {
   height: 25rem;
-  overflow:hidden;
 }
 .bigBanner-inner {
   img {

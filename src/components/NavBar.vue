@@ -28,22 +28,24 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">Work Experiences</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">Skills</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
+          <a class="btn btn-secondary" href="#" role="button"> Login</a>
+            
         </div>
       </nav>
-    
+   
 
     
   </div>
