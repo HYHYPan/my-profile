@@ -24,14 +24,14 @@ body {
 .bigBanner-inner {
   height: 25rem;
 }
-.bigBanner-inner {
-  img {
+.bigBanner-inner >img {
+   
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: $img-size;
-  }
+  
 }
 
 
@@ -41,7 +41,7 @@ body {
 /* Center align the text within the three columns below the carousel */
 .about-img{
   margin-bottom: 1.5rem;
-  height:$img-size+3 ;
+  height:$img-size+4 ;
   overflow:hidden;
   
 } 
@@ -95,17 +95,3 @@ body {
   }
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}

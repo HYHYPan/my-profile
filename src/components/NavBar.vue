@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">
+              <a class="nav-link" @click.prevent="homePage" >
                 HAZELPAN
                 <span class="sr-only">(current)</span>
               </a>
@@ -41,13 +41,35 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <a class="btn btn-secondary" href="#" role="button"> Login</a>
+          <button class="btn btn-secondary" role="button" @click="loginPage" > Login</button>
             
         </div>
       </nav>
    
-
+   
     
   </div>
 </template>
+
+<script>
+export default {
+  name:'NavBar',
+  data(){
+    return{
+      login: './pages/login',
+    }
+  },
+  methods:{
+    homePage(){
+      const vm = this;
+      vm.$router.push('/');
+    },
+    loginPage(){
+      const vm = this;
+      vm.$router.push('/login');
+    }
+  }
+
+}
+</script>
 
