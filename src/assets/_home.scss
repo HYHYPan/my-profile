@@ -62,8 +62,8 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
+  margin: 0rem ; /* Space out the Bootstrap <hr> more */
+ }
 
 /* Thin out the marketing headings */
 .featurette-heading {
@@ -91,7 +91,7 @@ body {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 

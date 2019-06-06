@@ -18,12 +18,23 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="container marketing">
+       
+           <h1 class="display-4 mx-auto text-center">About Me</h1>
+       
         <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">
-              About Me
-              <span class="text-muted"></span>
-            </h2>
+          
+          <div class="col-md-12 order-md-2" style="display:inline-block;">
+            <div class="col-md-5 order-md-1 mt-4 about-img" style="display:inline-block;">
+            <img
+              :src="aboutImg"
+              style="display:inline;"
+              alt="about-img"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto container"
+            >
+            
+          </div>
+           
+           <div class="col-md-6" style="display:inline-block;">
 
             <h5 class="mt-4">
               <i class="fas fa-female"></i> FEMALE
@@ -53,91 +64,19 @@
               <li>Taipei Municipal Datong High School</li>
             </ul>
           </div>
-
-          <div class="col-md-5 order-md-1 mt-4 about-img">
-            <img
-              :src="aboutImg"
-              alt="about-img"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto container"
-            >
-          </div>
+        </div>
+          
         </div>
 
         <hr class="featurette-divider mt-4">
 
-        <!-- The row start from here-->
-        <div class="row">
-          <div class="col-lg-4">
-            <title>Logo design</title>
-            <img :src="row1" alt="row1" class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140">
+        <Carousel></Carousel> 
 
-            <h2>Logo design</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            
-            <button class="btn btn-info" role="button" @click="buyNow" > Buy Now </button> 
-            <button class="btn btn-info" role="button" @click="buyNow" > Add to Cart </button>
-            
-            
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-              <title>Web design</title>
-              <img :src="row2" alt="row2" class="bd-placeholder-img "
-              
-              width="140"
-              height="140">
-            <h2>Web design</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <button class="btn btn-info" role="button" @click="buyNow" > Buy Now </button> 
-            <button class="btn btn-info" role="button" @click="buyNow" > Add to Cart </button>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img :src="row3" alt="row3" class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140">
-            <h2>Illustration design</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <button class="btn btn-info" role="button" @click="buyNow" > Buy Now </button> 
-            <button class="btn btn-info" role="button" @click="buyNow" > Add to Cart </button>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <!-- START THE FEATURETTES -->
+        <!-- START THE Works -->
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              First featurette heading.
-              <span class="text-muted">It’ll blow your mind.</span>
-            </h2>
-            <p
-              class="lead"
-            >Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-             <svg
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 2013"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#777"></rect>
-              <text x="50%" y="50%" fill="#000" dy=".3em">2013</text>
-            </svg>
-          </div>
-        </div>
+        <Works></Works>
 
         <hr class="featurette-divider">
 
@@ -147,9 +86,11 @@
               Oh yeah, it’s that good.
               <span class="text-muted">See for yourself.</span>
             </h2>
-            <p
-              class="lead"
-            >Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">
+            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. 
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur. 
+            Fusce dapibus, tellus ac cursus commodo.
+            </p>
           </div>
           <div class="col-md-5 order-md-1">
             <svg
@@ -236,6 +177,8 @@
 <script>
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/footer";
+import Carousel from "@/components/pages/homeComponents/Carousel";
+import Works from "@/components/pages/homeComponents/Works";
 import $ from 'jquery';
 
 export default {
@@ -253,7 +196,9 @@ export default {
   },
   components: {
     NavBar,
-    Footer
+    Footer,
+    Carousel,
+    Works,
   },
   methods:{
     buyNow(){

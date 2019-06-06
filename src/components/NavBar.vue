@@ -54,11 +54,6 @@
 <script>
 export default {
   name:'NavBar',
-  data(){
-    return{
-      login: './pages/login',
-    }
-  },
   methods:{
     homePage(){
       const vm = this;
