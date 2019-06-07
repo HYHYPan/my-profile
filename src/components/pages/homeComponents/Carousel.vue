@@ -10,35 +10,73 @@
         <div class="service-header mx-auto text-center">
           <h1 class="display-4">Service</h1>
         </div>
+        <!-- First carousel items -->
         <div class="carousel-item active">
           <div class="album py-5">
             <div class="container">
               <div class="row">
-                <div class="col-md-4 mx-auto text-center">
-                  <div class="card mb-4 mx-auto text-center">
+                <div class="col-md-4">
+                  <div class="card mb-4">
                     <img
                       :src="card1"
                       alt="card1"
                       id="card1"
                       class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
-                      width="170"
-                      height="170"
+                      width="210"
+                      height="160"
                     >
-
                     <div class="card-body">
-                      <h2 class="card-title">Logo design</h2>
+                      <h2 class="card-title">Social media management</h2>
                       <p
                         class="card-text"
                       >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group mx-auto text-center">
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
 
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mx-auto text-center">
+                  <div class="card mb-4 mx-auto text-center">
+                    <img
+                      :src="card2"
+                      alt="card2"
+                      id="card2"
+                      class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
+                      width="150"
+                      height="150"
+                    >
+
+                    <div class="card-body">
+                      <h2 class="card-title">FaceBook ads management</h2>
+                      <p
+                        class="card-text"
+                      >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group mx-auto text-center">
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
+
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -48,9 +86,9 @@
                 <div class="col-md-4">
                   <div class="card mb-4">
                     <img
-                      :src="card2"
-                      alt="card2"
-                      id="card2"
+                      :src="card3"
+                      alt="card3"
+                      id="card3"
                       class="bd-placeholder-img mx-auto text-center mt-4"
                       width="180"
                       height="180"
@@ -61,43 +99,18 @@
                         class="card-text"
                       >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
+                        <div class="btn-group mx-auto text-center">
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
 
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img
-                      :src="card3"
-                      alt="card3"
-                      id="card3"
-                      class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
-                      width="180"
-                      height="180"
-                    >
-                    <div class="card-body">
-                      <h2 class="card-title">Illustration design</h2>
-                      <p
-                        class="card-text"
-                      >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
-
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -108,39 +121,39 @@
           </div>
         </div>
 
+        <!-- Second carousel item -->
         <div class="carousel-item">
           <div class="album py-5">
             <div class="container">
               <div class="row">
                 <div class="col-md-4">
                   <div class="card mb-4">
-                    <svg
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="225"
-                      xmlns="http://www.w3.org/2000/svg"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
+                    <img
+                      :src="card4"
+                      alt="card4"
+                      id="card4"
+                      class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
+                      width="180"
+                      height="180"
                     >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c"></rect>
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
                     <div class="card-body">
+                      <h2 class="card-title">Photoshop</h2>
                       <p
                         class="card-text"
                       >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
+                        <div class="btn-group mx-auto text-center">
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
 
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -148,33 +161,33 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4">
-                    <svg
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="225"
-                      xmlns="http://www.w3.org/2000/svg"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
+                    <img
+                      :src="card5"
+                      alt="card5"
+                      id="card5"
+                      class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
+                      width="180"
+                      height="180"
                     >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c"></rect>
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
+
                     <div class="card-body">
+                      <h2 class="card-title">Photography</h2>
                       <p
                         class="card-text"
                       >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                         <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
+                        <div class="btn-group mx-auto text-center">
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
 
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -182,33 +195,32 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4">
-                    <svg
-                      class="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height="225"
-                      xmlns="http://www.w3.org/2000/svg"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
+                    <img
+                      :src="card6"
+                      alt="card6"
+                      id="card6"
+                      class="bd-placeholder-img rounded-circle mx-auto text-center mt-4"
+                      width="180"
+                      height="180"
                     >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c"></rect>
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
                     <div class="card-body">
+                      <h2 class="card-title">Illustration design</h2>
                       <p
                         class="card-text"
                       >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                          Buy Now
-                          </button>
+                        <div class="btn-group mx-auto text-center">
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Buy Now</button>
 
-                          <button class="btn btn-sm btn-outline-secondary" role="button" @click="buyNow">
-                            Add to Cart
-                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary"
+                            role="button"
+                            @click="buyNow"
+                          >Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -233,7 +245,6 @@
         href="#carouselExampleIndicators"
         role="button"
         data-slide="next"
-        
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
@@ -298,7 +309,7 @@
 .card {
   text-align: center;
 }
-a .carousel-control-next{
+a .carousel-control-next {
   width: 180px;
   height: 180px;
 }
@@ -311,9 +322,12 @@ export default {
   name: "Carousel",
   data() {
     return {
-      card1: "static/images/logo.png",
-      card2: "static/images/html5.png",
-      card3: "static/images/illustration.jpg"
+      card1: "static/images/social_media.jpg",
+      card2: "static/images/f_logo_250.png",
+      card3: "static/images/html5.png",
+      card4: "static/images/head.png",
+      card5: "static/images/photo.jpg",
+      card6: "static/images/illustration.jpg"
     };
   },
   methods: {

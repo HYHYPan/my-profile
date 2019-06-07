@@ -32,11 +32,12 @@
           >
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#007bff"></rect>
-            <text x="50%" y="50%" fill="#FFFAFA" dy=".3em">2018</text>
+            <text x="50%" y="50%" fill="#FFFAFA" dy=".3em">20
+              <br /> 18</text>
           </svg>
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark"><h4> Kong Shiang Network Co., Ltd  </h4></strong>
-             <h5>Backend Engineer</h5>
+            <strong class="d-block text-gray-dark"><h5> Kong Shiang Network Co., Ltd, Backend Engineer  </h5></strong>
+             
           </p>
         </div>
         <div class="media text-muted pt-3">
@@ -52,7 +53,7 @@
           >
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#e83e8c"></rect>
-            <text x="50%" y="50%" fill="#FFFAFA" dy=".3em">2016-2017</text>
+            <text x="50%" y="50%" fill="#FFFAFA" dy=".3em">2016 <br/>-2017</text>
           </svg>
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <strong class="d-block text-gray-dark"> <h5> SAYA Network Co., Ltd,LINE@ Account Manager, Dec.2016-Dec.2017 </h5> </strong>
@@ -63,7 +64,7 @@
           <svg
             class="bd-placeholder-img mr-2 rounded"
             width="100"
-            height="80"
+            height="50"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice"
             focusable="false"
