@@ -191,5 +191,9 @@ export default {
 };
 </script>
 
+<style lang="scss" scope="../assets/_admin">
+  
+</style>
+
 
 

@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/pages/Home'
 import Login from '@/components/pages/Login'
 import Admin from '@/components/pages/Admin'
+import Service from '@/components/pages/homeComponents/Carousel'
 
 Vue.use(Router)
 
@@ -17,7 +18,14 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path: '/service',
+          name: 'service',
+          component: Service
+        }
+      ]
     },
     {
       path: '/login',

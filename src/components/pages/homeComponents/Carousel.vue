@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      
       <div class="carousel-inner">
         <div class="service-header mx-auto text-center">
           <h1 class="display-4">Service</h1>
@@ -233,16 +229,17 @@
       </div>
       <a
         class="carousel-control-prev"
-        href="#carouselExampleIndicators"
+        href="#carouselExampleControls"
         role="button"
         data-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
+        
       </a>
       <a
         class="carousel-control-next"
-        href="#carouselExampleIndicators"
+        href="#carouselExampleControls"
         role="button"
         data-slide="next"
       >
@@ -285,8 +282,8 @@
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   outline: grey;
   background-size: 80%, 80%;
   border-radius: 50%;
@@ -297,43 +294,45 @@
 
 .carousel-control-next-icon:after {
   content: ">";
-  font-size: 50px;
+  font-size: 30px;
   color: rgb(150, 150, 150);
 }
 
 .carousel-control-prev-icon:after {
   content: "<";
-  font-size: 50px;
+  font-size: 30px;
   color: rgb(150, 150, 150);
 }
 .card {
   text-align: center;
 }
-a .carousel-control-next {
-  width: 180px;
-  height: 180px;
+a .carousel-control-next .carousel-control-prev{
+  width: 80px;
+  height: 80px;
 }
 </style>
 
 <script>
 import $ from "jquery";
 
+
 export default {
   name: "Carousel",
   data() {
     return {
-      card1: "static/images/social_media.jpg",
-      card2: "static/images/f_logo_250.png",
-      card3: "static/images/html5.png",
-      card4: "static/images/head.png",
-      card5: "static/images/photo.jpg",
-      card6: "static/images/illustration.jpg"
+      card1: "static/images/Service/social_media.jpg",
+      card2: "static/images/Service/f_logo_250.png",
+      card3: "static/images/Service/html5.png",
+      card4: "static/images/Service/head.png",
+      card5: "static/images/Service/photo.jpg",
+      card6: "static/images/Service/illustration.jpg"
     };
   },
   methods: {
     buyNow() {
       $("#productModal").modal("show");
     }
-  }
+  },
+  
 };
 </script>

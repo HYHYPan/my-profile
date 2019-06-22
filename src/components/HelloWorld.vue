@@ -1,113 +1,45 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div>
+    <div id="tabView">
+  <div class="radio-group"  >
+    input:
+    <input type="text" v-model="tabView">
+    <span v-for="(tab ,index) in tabs"  :key="index"
+     :class="{cur:iscur==index}"
+     @click="iscur=index,tabChange('Parking' + (index + 1))">{{tab.name}}
+    </span>
+
+    <keep-alive> 
+    <!--  快取name等於tabView的元件 -->
+      <component v-bind:is="tabView"></component>
+    </keep-alive>
+  </div>
+</div>
   </div>
 </template>
 
 <script>
+import Parking1 from '@/components/pages/homeComponents/Carousel'
+import Parking2 from '@/components/pages/homeComponents/Carousel'
+import Parking3 from '@/components/pages/homeComponents/Carousel'
 export default {
-  name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+ 	tabView: 'Parking1',
+	tabs: [{name: "裝置列表"}, {name: "車位列表"} ,{name: "進出記錄"}],
+	iscur: 0,
+      };
+  },
+  components:{
+    Parking1,
+    Parking2,
+    Parking3,
+  },
+  methods: {
+    tabChange (tab) {
+        this.tabView = tab;
     }
   }
-}
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
