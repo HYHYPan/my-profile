@@ -1,115 +1,79 @@
 <template>
-  <div id="home">
-    <!-- header -->
-    <header>
-      <NavBar></NavBar>
-    </header>
+  <div>
+    <!-- NavBar -->
+    <NavBar></NavBar>
 
-    <!-- main contents -->
-    <main role="main ">
-      <div class="bigBanner">
-        <div class="bigBanner-table mx-auto text-center">
-          <div class="bigBanner-table-cell">
-            <h1 class="big-title display-4">Hazel Pan</h1>
+    
+    <!-- NavBar -->
+    <!-- <NavBar></NavBar> -->
 
-            <div class="actions" >
-              <a href="#about">
-              <button type="button" class="btn btn-outline-warning btn-lg" >
-                <strong>Learn more</strong>
-                
-              </button>
-              </a>
+    <!-- SideBar -->
+    <!-- <SideBar></SideBar> -->
+
+    <!-- <div class="container-fluid"> -->
+    <!-- <div class="row"> -->
+
+    <!-- <main role="main "> -->
+    <!-- <div class="bigBanner">
+            <div class="bigBanner-table mx-auto text-center">
+              <div class="bigBanner-table-cell">
+                <h1 class="big-title display-4">Hazel Pan</h1>
+
+                <div class="actions">
+                  <a href="#about">
+                    <button type="button" class="btn btn-outline-warning btn-lg">
+                      <strong>Learn more</strong>
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+    </div>-->
 
-      <!-- Marketing messaging and featurettes
-      ==================================================-->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Marketing messaging and featurettes
+    ==================================================-->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container">
-        <!-- <div class="row featurette">
-          <h1 class="l-title display-4 mx-auto text-center">About Me</h1>
-          <div class="col-md-12">
-            <div class="col-md-5 mt-4 mb-3 about-img col-left">
-              <img
-                :src="aboutImg"
-                alt="about-img"
-                class="bd-placeholder-img featurette-image img-fluid mx-auto container"
-              >
+    <!-- <div class="container"> -->
+    <!-- <hr class="featurette-divider mt-4"> -->
+    <!-- <div id="about">
+              <About></About>
             </div>
 
-            <div class="col-md-5 mb-3 col-right">
-              <h5>
-                <i class="fas fa-female"></i> FEMALE
-              </h5>
+            <hr class="featurette-divider mt-4">
 
-              <h5>
-                <i class="fas fa-walking"></i> PERSONAITY
-              </h5>
+            <div id="service">
+              <Carousel></Carousel>
+    </div>-->
 
-              <ul>
-                <li>Have strong passions to innovated good ideas to help and communicate with people.</li>
-                <li>Willing to learn about new processes and concepts with a strong sense of curiosity.</li>
-              </ul>
+    <!-- START THE Works -->
 
-              <h5>
-                <i class="fas fa-university"></i> EDUCATION
-              </h5>
-
-              <ul>
-                <li>
-                  National Cheng Chi University (NCCU)
-                  <ul>
-                    <li>Bachelor of Chinese Literature, Jun. 2013.</li>
-                    <li>Minor: Economics, Jun. 2013.</li>
-                  </ul>
-                </li>
-                <li>Taipei Municipal Datong High School</li>
-              </ul>
+    <!-- <hr class="featurette-divider">
+            <div id="work">
+              <Works></Works>
             </div>
-          </div>
-        </div> -->
+            <hr class="featurette-divider">
+            <div id="skill">
+              <Skills></Skills>
+            </div>
+            <hr class="featurette-divider">
+            <div id="contact">
+              <Contact></Contact>
+            </div>
+    <hr class="featurette-divider">-->
 
-        <!-- <hr class="featurette-divider mt-4"> -->
-          <div id="about">
-            <About></About>
-          </div>
-          
-        
-        <hr class="featurette-divider mt-4">
+    <!-- /END THE FEATURETTES -->
+    <!-- </div> -->
+    <!-- /.container -->
 
-        <div id="service">
-          <Carousel></Carousel>
-        </div>
-
-        <!-- START THE Works -->
-
-        <hr class="featurette-divider">
-        <div id="work">
-          <Works></Works>
-        </div>
-        <hr class="featurette-divider">
-        <div id="skill">
-          <Skills></Skills>
-        </div>
-        <hr class="featurette-divider">
-        <div id="contact">
-          <Contact></Contact>
-        </div>
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-      </div>
-      <!-- /.container -->
-
-      <!-- FOOTER -->
-      <Footer/>
-    </main>
+    <!-- FOOTER -->
+    <!-- <Footer/> -->
+    <!-- </main> -->
+    <!-- </div> -->
+    <!-- </div> -->
 
     <!-- Modal -->
-    <div
+    <!-- <div
       class="modal fade"
       id="productModal"
       tabindex="-1"
@@ -132,20 +96,136 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
+
+<style lang="scss" scoped>
+body {
+  font-size: 0.875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  height:100%;
+  background-color:#2A4764;
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  vertical-align:middle;
+
+}
+
+.sidebar-text{
+  color: white;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: white;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.btn-sm{
+  border-radius: 50rem;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+  padding-top: 133px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
+}
+
+// /*
+//  * Navbar
+//  */
+
+// .navbar-brand {
+//   padding-top: 0.75rem;
+//   padding-bottom: 0.75rem;
+//   font-size: 1rem;
+//   background-color: rgba(0, 0, 0, 0.25);
+//   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+// }
+
+// .navbar .form-control {
+//   padding: 0.75rem 1rem;
+//   border-width: 0;
+//   border-radius: 0;
+// }
+
+// .form-control-dark {
+//   color: #fff;
+//   background-color: rgba(255, 255, 255, 0.1);
+//   border-color: rgba(255, 255, 255, 0.1);
+// }
+
+// .form-control-dark:focus {
+//   border-color: transparent;
+//   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+// }
+</style>
 
 <script>
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/footer";
-import Carousel from "@/components/pages/homeComponents/Carousel";
-import Works from "@/components/pages/homeComponents/Works";
-import Skills from "@/components/pages/homeComponents/Skills";
-import Contact from "@/components/pages/homeComponents/Contact";
-import About from "@/components/pages/homeComponents/About";
 import $ from "jquery";
-
 
 export default {
   name: "Home",
@@ -163,17 +243,12 @@ export default {
   components: {
     NavBar,
     Footer,
-    Carousel,
-    Works,
-    Skills,
-    Contact,
-    About,
+    
   },
   methods: {
     buyNow() {
       $("#productModal").modal("show");
-    },
-    
+    }
   }
 };
 </script>

@@ -1,45 +1,7 @@
 <template>
     <div>
         <section class="about_me clearfix">
-          <div class="container">
-            <h2  id="about">about me</h2>
-
-            <div class="summary">
-              <div class="col-left">
-               
-              </div>
-
-              <div class="col-right">
-                <div class="personal-info">
-                  <h3>hello!</h3>
-                  <i class="fas fa-female"></i> FEMALE
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil doloribus odit, similique sed. Fugiat
-                    sint cumque
-                    earum, corporis totam quos iste repellat natus voluptatum. Quidem dignissimos voluptates, quisquam quas
-                    facilis.
-                  </p>
-                </div>
-
-                <div class="skill">
-                  <ul>
-                    <li>html5 and css3</li>
-                    <li>responsive website design</li>
-                    <li>ruby on rails</li>
-                  </ul>
-                </div>
-
-                <div class="button-group">
-                  <div class="download_cv">
-                    <a href>download CV</a>
-                  </div>
-                  <div class="hire_me">
-                    <a href>hire me</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </section>
     </div>
 </template>

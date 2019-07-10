@@ -6,17 +6,14 @@ $img-size: 25rem;
 
 body {
   padding-top: 3rem;
+  min-width: 100%;
+  background-repeat: repeat;
   
   // color: #5a5a5a;
   // background:#eee;
   
 }
 
-#home{
-  background-image: url("/static/images/big_banner/bg01.jpg");
-  min-width: 100%;
-  background-repeat: repeat;
-}
 
 .bigBanner {
   
