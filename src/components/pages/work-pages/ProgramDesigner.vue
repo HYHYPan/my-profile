@@ -2,7 +2,7 @@
   
     <div class="content pt-5  align-content-center justify-content-center">
       <div class="main-image ">
-        <img class="d-flex align-content-end left" :src="img" alt="Main image">
+        <img class="d-flex align-content-end left" :src="mainImage" alt="Main image">
       </div>
 
       <div class="text align-content-center justify-content-center">
@@ -47,7 +47,7 @@ export default {
   name: "program-designer",
   data() {
     return {
-      img: "static/images/Works/work2-img.png"
+      mainImage: "static/images/Works/work2-img.png"
     };
   }
 };
