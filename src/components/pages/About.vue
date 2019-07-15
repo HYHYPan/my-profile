@@ -1,28 +1,21 @@
 <template>
   <div>
-    <!-- <div class="container-fluid"> -->
-      <!-- <div class="row"> -->
+    <div class="container-fluid">
+      <div class="row">
         <!-- SideBar -->
 
         <nav class="col-md-4 d-none d-md-block sidebar">
-          <div class="sidebar-sticky">
-            <h1 class="sidebar-text">Hazel Pan</h1>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span
-                    data-feather="home"
-                    class="sidebar-text"
-                  >sjiojdoij sodjoisjoidjoisjodi osidjo</span>
-                </a>
+          <div class="sidebar-sticky ">
+              <div class="sidebar-box">
+                  <h1 class="sidebar-text sidebar-title">Hazel Pan</h1>
 
                 <a href="#about">
                   <button type="button" class="btn btn-outline-light btn-sm">
                     <strong>Learn more</strong>
                   </button>
                 </a>
-              </li>
-            </ul>
+              </div>
+
           </div>
         </nav>
 
@@ -56,15 +49,13 @@
           </div>
           
         </main>
-      <!-- </div> -->
-    <!-- </div> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-body {
-  font-size: 0.875rem;
-}
+
 
 .feather {
   width: 16px;
@@ -86,6 +77,7 @@ body {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   background-color: #2a4764;
+  line-height:100px;
 }
 
 .sidebar-sticky {
@@ -96,11 +88,17 @@ body {
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  vertical-align: middle;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
 
 .sidebar-text {
   color: white;
+  font-weight: lighter;
+  font-family: Noto, sans;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -129,9 +127,9 @@ body {
   color: inherit;
 }
 
-.sidebar-heading {
-  font-size: 0.75rem;
-  text-transform: uppercase;
+.sidebar-title {
+  font-size: 5vw;
+  
 }
 
 .btn-sm {
@@ -143,14 +141,14 @@ body {
  */
 
 [role="main"] {
-  padding-top: 0rem; /* Space for fixed navbar */
+  padding-top: 0px; /* Space for fixed navbar */
   padding-left:0px;
   padding-right: 0px; 
 }
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 0px; /* Space for fixed navbar */
+    padding-top: 0rem; /* Space for fixed navbar */
   }
 }
 

@@ -3,7 +3,7 @@
     <!-- NavBar -->
     <NavBar></NavBar>
 
-    
+     <router-view> </router-view>
     <!-- NavBar -->
     <!-- <NavBar></NavBar> -->
 

@@ -1,67 +1,55 @@
 <template>
   <div>
-     <div class="container-fluid">
+    <div class="container-fluid">
       <div class="row">
         <!-- SideBar -->
 
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
-            <h1 class="sidebar-text">Education</h1>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span
-                    data-feather="home"
-                    class="sidebar-text"
-                  >sjiojdoij sodjoisjoidjoisjodi osidjo</span>
-                </a>
+            <div class="sidebar-box">
+              <h1 class="sidebar-text">Education</h1>
 
-                <a href="#about">
-                  <button
-                    type="button"
-                    class="btn btn-outline-light btn-sm"
-                    
-                  >
-                    <strong>Learn more</strong>
-                  </button>
-                </a>
-              </li>
-            </ul>
+              <p class="sidebar-text">
+                Here is about my education, ability and certificate.
+              </p>
+            </div>
           </div>
         </nav>
 
-        <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4">
+        <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center">
+          <div class="justify-content-between">
           <div
-            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            class=" d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Education</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
-            </div>
+            <h1 >Education</h1>
+
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+              <span data-feather="calendar"></span>
+              Photo
+            </button>
           </div>
-          <h1>
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-            sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-          </h1>
+          <div class="box box-content">
+            <h2>National Cheng Chi University (NCCU)</h2>
+          <p>
+           Bachelor of Chinese Literature, Jun. 2013.
+Minor: Economics, Jun. 2013.
+          </p>
+          </div>
+          </div>
+
+          <div class="justify-content-between">
+          <div
+            class=" d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1> Certificate & Ability </h1>
+
+          </div>
+          <div class="box box-content">
+            <h2>Basic Test on the FinTech Knowledge </h2>
+            <h2>BTOEIC Listening & Reading Test：790 points </h2>
+          </div>
+          </div>
+
         </main>
       </div>
     </div>
@@ -69,10 +57,6 @@
 </template>
 
 <style lang="scss" scoped>
-body {
-  font-size: 0.875rem;
-}
-
 .feather {
   width: 16px;
   height: 16px;
@@ -91,8 +75,8 @@ body {
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-  height:100%;
-  background-color:#2A4764;
+  height: 100%;
+  background-color: #2a4764;
 }
 
 .sidebar-sticky {
@@ -103,11 +87,12 @@ body {
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  vertical-align:middle;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sidebar-text{
+.sidebar-text {
   color: white;
 }
 
@@ -142,7 +127,7 @@ body {
   text-transform: uppercase;
 }
 
-.btn-sm{
+.btn-sm {
   border-radius: 50rem;
 }
 
@@ -152,18 +137,30 @@ body {
 
 [role="main"] {
   padding-top: 133px; /* Space for fixed navbar */
+  padding-right: 4vw;
+  padding-left: 4vw;
 }
 
 @media (min-width: 768px) {
   [role="main"] {
     padding-top: 48px; /* Space for fixed navbar */
+    padding-right: 4vw;
+  padding-left: 4vw;
   }
+
+.box {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+.border-bottom{
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
 }
 </style>
 
 <script>
 import $ from "jquery";
-
 
 export default {
   name: "Education",
@@ -181,7 +178,6 @@ export default {
     buyNow() {
       $("#productModal").modal("show");
     }
-  },
-  
+  }
 };
 </script>
