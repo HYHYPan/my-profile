@@ -127,7 +127,7 @@ Minor: Economics, Jun. 2013.
   text-transform: uppercase;
 }
 
-.btn-sm {
+.btn {
   border-radius: 50rem;
 }
 

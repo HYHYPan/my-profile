@@ -5,7 +5,17 @@
         </div>
         <div class="text-box">
           
-        <h1 class="title ">Account Manager</h1>
+        <div class="title-box">
+          Account Manager
+            <button type="button" class="btn btn-sm btn-outline-secondary title-btn">
+             
+              Photo
+            </button>
+          
+          
+
+        </div>
+
       <div class="text">
         <p >SAYA Network Co., Ltd</p>
 
@@ -26,24 +36,41 @@
       width: 66.6vw;
       height: 23vw;
     }
-    .title{
-  border-bottom:1px #000 solid; 
+    .title-box{
+  border-bottom:1px #2a4764 solid; 
   padding-bottom:5px; 
-  margin: 2vw 20vw; 
+  margin: 2vw 15vw; 
   // font-weight: lighter;
   font-family: Noto, sans;
-  text-align: center;
+text-align: left;
+  font-size: 2.3vw;
 }
+
+// .title-text{
+     
+//   margin:0px;
+// }
+
+.title-btn{
+     margin-left: 6vw;
+}
+
     .text-box {
   font-family: Noto, sans;
 
   text-align: center;
   
 }
+
+.btn {
+  border-radius: 50rem;
+}
+
 .text{
   text-align: left;
   padding: 0 20vw;
 }
+
 
 
 </style>
