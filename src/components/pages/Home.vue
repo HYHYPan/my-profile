@@ -3,100 +3,12 @@
     <!-- NavBar -->
     <NavBar></NavBar>
 
+    <div class="cuttan">
+       <svg></svg>
+    </div>
+
      <router-view> </router-view>
-    <!-- NavBar -->
-    <!-- <NavBar></NavBar> -->
-
-    <!-- SideBar -->
-    <!-- <SideBar></SideBar> -->
-
-    <!-- <div class="container-fluid"> -->
-    <!-- <div class="row"> -->
-
-    <!-- <main role="main "> -->
-    <!-- <div class="bigBanner">
-            <div class="bigBanner-table mx-auto text-center">
-              <div class="bigBanner-table-cell">
-                <h1 class="big-title display-4">Hazel Pan</h1>
-
-                <div class="actions">
-                  <a href="#about">
-                    <button type="button" class="btn btn-outline-warning btn-lg">
-                      <strong>Learn more</strong>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-    </div>-->
-
-    <!-- Marketing messaging and featurettes
-    ==================================================-->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <!-- <div class="container"> -->
-    <!-- <hr class="featurette-divider mt-4"> -->
-    <!-- <div id="about">
-              <About></About>
-            </div>
-
-            <hr class="featurette-divider mt-4">
-
-            <div id="service">
-              <Carousel></Carousel>
-    </div>-->
-
-    <!-- START THE Works -->
-
-    <!-- <hr class="featurette-divider">
-            <div id="work">
-              <Works></Works>
-            </div>
-            <hr class="featurette-divider">
-            <div id="skill">
-              <Skills></Skills>
-            </div>
-            <hr class="featurette-divider">
-            <div id="contact">
-              <Contact></Contact>
-            </div>
-    <hr class="featurette-divider">-->
-
-    <!-- /END THE FEATURETTES -->
-    <!-- </div> -->
-    <!-- /.container -->
-
-    <!-- FOOTER -->
-    <!-- <Footer/> -->
-    <!-- </main> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- Modal -->
-    <!-- <div
-      class="modal fade"
-      id="productModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLongTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Cart subtotal</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Process to checkout</button>
-          </div>
-        </div>
-      </div>
-    </div>-->
+   
   </div>
 </template>
 
@@ -109,6 +21,23 @@ body {
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+}
+
+.cuttan{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  height: 100%;
+  background-color: #2a4764;
+}
+
+svg:active {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+
 }
 
 /*
