@@ -3,9 +3,9 @@
     <!-- NavBar -->
     <NavBar></NavBar>
 
-    <div class="cuttan">
+    <!-- <div class="cuttan">
        <svg></svg>
-    </div>
+    </div> -->
 
      <router-view> </router-view>
    
@@ -34,11 +34,11 @@ body {
   background-color: #2a4764;
 }
 
-svg:active {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+// svg:active {
+//   -webkit-transform: scaleX(0);
+//   transform: scaleX(0);
 
-}
+// }
 
 /*
  * Sidebar

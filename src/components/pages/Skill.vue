@@ -6,7 +6,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-text">Skill</h1>
+              <h1 class="sidebar-title">Skill</h1>
               <p
                 class="sidebar-text"
               >There are four main groups of my skills : Program, Design, Marketing and Office software.</p>
@@ -217,9 +217,18 @@
   align-items: center;
 }
 
+.sidebar-title {
+  font-size: 4vw;
+  color: white;
+  font-weight: lighter;
+  font-family: Noto, sans;
+}
+
 .sidebar-text {
   color: white;
   width: 15vw;
+  font-weight: lighter;
+  font-family: Noto, sans;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -252,6 +261,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+
 
 .btn {
   border-radius: 50rem;

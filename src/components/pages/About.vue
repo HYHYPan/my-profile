@@ -5,49 +5,42 @@
         <!-- SideBar -->
 
         <nav class="col-md-4 d-none d-md-block sidebar">
-          <div class="sidebar-sticky ">
-              <div class="sidebar-box">
-                  <h1 class="sidebar-text sidebar-title">Hazel Pan</h1>
-
-                <a href="#about">
-                  <button type="button" class="btn btn-outline-light btn-sm">
-                    <strong>Learn more</strong>
-                  </button>
-                </a>
-              </div>
-
+          <div class="sidebar-sticky">
+            <div class="sidebar-box">
+              <h1 class="sidebar-title font">Hazel Pan</h1>
+              <p class="sidebar-text font mt-4">
+                A dreammaker and an altruist.
+                
+                <br>“ Life is a great big canvas, and you should throw all the paint on if you can ”
+              </p>
+            </div>
           </div>
         </nav>
 
-        <main role="main" class="col-md-8 ml-sm-auto col-lg-8 ">
-          <div
-            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center "
-          >
-          
-            <div class="left">
-              <img class="left-img" :src="img1" alt="photo">
-              <p class="mt-4">
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-              </p>
+        <main role="main" class="col-md-8 ml-sm-auto col-lg-8">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap">
+            <div class="left align-items-center">
+              <img class="left-img mb-3" :src="img1" alt="photo">
+              <p class="content-title mt-4 font">Advantage & Personality</p>
+              
+                <ul class="content-text font align-items-center mt-3 ml-3 mr-3">
+                <li>Willing to innovate good ideas to help people.</li>
+                <li>Ability to work independently and within a team.</li>
+                <li>Willing to learn about new processes and concepts with a strong sense of curiosity.</li>
+                
+              </ul>
+              
             </div>
 
             <div class="right">
-              <p class="pt-3">
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
-                sjiojdoij sodjoisjoidjoisjodi osidjosjiojdoij sodjoisjoidjoisjodi osidjo
+              <p class="pt-5 content-text font">
+                Hi, I am <strong class="name font">Hazel Pan</strong>, an easy-going individual. I can deal with colleagues harmoniously in most situations.
+                Always have a strong sense of curiosity and a desire to know how things work.
+                Love Traveling, painting and puzzle-solving.
               </p>
-              <img class="right-img mt-4" :src="img2" alt="photo">
+              <img class="right-img mt-5" :src="img2" alt="photo">
             </div>
-          
           </div>
-          
         </main>
       </div>
     </div>
@@ -55,12 +48,14 @@
 </template>
 
 <style lang="scss" scoped>
-
-
 .feather {
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+}
+
+.font{
+  font-family: Noto, sans;
 }
 
 /*
@@ -77,7 +72,6 @@
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   background-color: #2a4764;
-  line-height:100px;
 }
 
 .sidebar-sticky {
@@ -88,17 +82,27 @@
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-   display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.sidebar-box {
+  text-align: center;
+}
 
-.sidebar-text {
+.sidebar-title {
   color: white;
   font-weight: lighter;
-  font-family: Noto, sans;
+  font-size: 5vw;
+}
+
+.sidebar-text {
+  text-align: center;
+  color: white;
+  width: 22.5vw;
+  
+  line-height: 2vw;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -127,14 +131,7 @@
   color: inherit;
 }
 
-.sidebar-title {
-  font-size: 5vw;
-  
-}
 
-.btn-sm {
-  border-radius: 50rem;
-}
 
 /*
  * Content
@@ -142,8 +139,8 @@
 
 [role="main"] {
   padding-top: 0px; /* Space for fixed navbar */
-  padding-left:0px;
-  padding-right: 0px; 
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media (min-width: 768px) {
@@ -158,10 +155,24 @@
   width: 50%;
   padding: 0px;
 }
+.name{
+  display: inline; 
+  font-size: 2vw;
+  font-weight: normal;
+}
+.content-title{
+  text-align: center;
+  padding: 0%;
+  font-size: 2vw;
+}
+.content-text {
+  padding: 0 3vw;
+}
 
 .left-img,
 .right-img {
   width: 100%;
+
   text-align: center;
   margin: 0px;
   padding: 0pt;
