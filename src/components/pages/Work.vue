@@ -6,60 +6,53 @@
 
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky d-flex">
-              <div class="sidebar-box">
-                  <h1 class="sidebar-text sidebar-title">Work experience</h1>
+            <div class="sidebar-box">
+              <h1 class="sidebar-text sidebar-title ">Work experience</h1>
 
-                <div class="btn-each">
-                <a href="#about" @click.prevent="getToPage('ov')">
-                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
+              <div class="btn-each">
+
+                    <a href="#about" @click.prevent="getToPage('ov')">
+                    <button type="button" class="btn btn-outline-light btn-sm content-btn">
                     Overview
-                  </button>
-                </a>
-                <!-- </div> -->
-                <!-- <div class="btn-each"> -->
+                     </button>
+                    </a>
+ 
                 <a href="#about" @click.prevent="getToPage('pd')">
-                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
-                    Program designer
-                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm content-btn"
+                  >Program designer</button>
                 </a>
-                <!-- </div> -->
 
-                <!-- <div class="btn-each"> -->
                 <a href="#about" @click.prevent="getToPage('am')">
-                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
-                    Account Manager
-                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm content-btn"
+                  >Account Manager</button>
                 </a>
-                <!-- </div> -->
-
-                <!-- <div class="btn-each"> -->
+                
                 <a href="#about" @click.prevent="getToPage('pp')">
-                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
-                    Patent Paralegal
-                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm content-btn"
+                  >Patent Paralegal</button>
                 </a>
-                </div>
-
               </div>
-
+            </div>
           </div>
         </nav>
 
-        <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center justify-content-center ">
-          
-          <div class=" d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center">
-             
-              <router-view> </router-view>
+        <main
+          role="main"
+          class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center justify-content-center"
+        >
+          <div class="d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center">
+            <!-- content of each page -->
+            <router-view></router-view>
           </div>
-         
-          
-
-          
-
         </main>
       </div>
     </div>
-    
 
     <!-- Modal -->
     <div
@@ -105,7 +98,6 @@ rect:hover {
   fill: rgb(65, 139, 207);
 }
 
-
 .feather {
   width: 16px;
   height: 16px;
@@ -126,7 +118,7 @@ rect:hover {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   background-color: #2a4764;
-  line-height:100px;
+  line-height: 100px;
 }
 
 .sidebar-sticky {
@@ -137,12 +129,10 @@ rect:hover {
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-   display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .sidebar-text {
   color: white;
@@ -177,16 +167,17 @@ rect:hover {
 }
 
 .sidebar-title {
-  font-size: 5vw;
-  
+  font-size: 4.5vw;
 }
 
 .content-btn {
   border-radius: 50rem;
 }
 
-a{
+a {
   display: block;
+  height: 2vw;
+  margin: 2vw
 }
 
 /*
@@ -195,58 +186,47 @@ a{
 
 [role="main"] {
   padding-top: 40px; /* Space for fixed navbar */
-  padding-left:0px;
-  padding-right: 0px; 
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media (min-width: 768px) {
   [role="main"] {
     padding-top: 0rem; /* Space for fixed navbar */
   }
-
-
-  
 }
-
-
 </style>
 
 <script>
 import $ from "jquery";
-import OverView from '@/components/pages/work-pages/OverView'
-import ProgramDesigner from '@/components/pages/work-pages/ProgramDesigner'
-import AccountManager from '@/components/pages/work-pages/AccountManager'
-import PatentParalegal from '@/components/pages/work-pages/PatentParalegal'
+import OverView from "@/components/pages/work-pages/OverView";
+import ProgramDesigner from "@/components/pages/work-pages/ProgramDesigner";
+import AccountManager from "@/components/pages/work-pages/AccountManager";
+import PatentParalegal from "@/components/pages/work-pages/PatentParalegal";
 
 export default {
   name: "Works",
   data() {
-    return {
-     
-    };
+    return {};
   },
   components: {
     OverView,
     ProgramDesigner,
     AccountManager,
-    PatentParalegal,
+    PatentParalegal
   },
   methods: {
-    getToPage(page){
-      if(page === 'ov'){
-        this.$router.push('/work');
-      }else if(page === 'pd'){
-        this.$router.push('/work/program-designer');
-      }else if(page === 'am'){
-        this.$router.push('/work/account-manager');
-      }else if(page === 'pp'){
-        this.$router.push('/work/patent-paralegal');
+    getToPage(page) {
+      if (page === "ov") {
+        this.$router.push("/work");
+      } else if (page === "pd") {
+        this.$router.push("/work/program-designer");
+      } else if (page === "am") {
+        this.$router.push("/work/account-manager");
+      } else if (page === "pp") {
+        this.$router.push("/work/patent-paralegal");
       }
-    },
-
-    
-
-
-}
+    }
+  }
 };
 </script>
