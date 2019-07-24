@@ -13,6 +13,7 @@
         <a class="nav-link nav-item" href="#" @click.prevent="getToPage('work')">Work experience</a>
         <a class="nav-link nav-item" href="#" @click.prevent="getToPage('skill')">Skills</a>
         <a class="nav-link nav-item" href="#" @click.prevent="getToPage('portfolio')">Portfolio</a>
+        <a class="nav-link nav-item" href="#" @click.prevent="getToPage('login')">Login</a>
           <!-- <ul class="nav justify-content-end "> -->
             
             
@@ -73,6 +74,7 @@
 </style>
 
 <script>
+import Login from '@/components/pages/Login';
 import Home from '@/components/pages/Home';
 import About from '@/components/pages/About';
 import Education from '@/components/pages/Education';
@@ -89,6 +91,7 @@ export default {
     };
   },
   components: {
+    Login,
     About,
     Education,
     Work,
@@ -107,6 +110,8 @@ export default {
         this.$router.push('/skill');
       }else if(page === 'portfolio'){
         this.$router.push('/portfolio');
+      }else if(page === 'login'){
+        this.$router.push('/login');
       }
     },
 

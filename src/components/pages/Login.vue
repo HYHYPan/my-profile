@@ -13,8 +13,8 @@
        <form class="form-signin">
       <img
         class="mb-4"
-        src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
-        alt
+        :src="img"
+        alt= "img"
         width="72"
         height="72"
       >
@@ -71,7 +71,7 @@
 
 <script>
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/footer";
+import SideBar from "@/components/SideBar";
 
 // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -151,12 +151,13 @@ export default {
   name: "Login",
   data() {
     return {
-      logo: "Welcome to Your Vue.js App"
+      logo: "Welcome to Your Vue.js App",
+      img:"static/images/Portfolio/12.jpg",
     };
   },
   components:{
       NavBar,
-      Footer,
+      SideBar,
   },
   methods:{
    
