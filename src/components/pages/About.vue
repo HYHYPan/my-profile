@@ -19,7 +19,7 @@
 
         <main role="main" class="col-md-8 ml-sm-auto col-lg-8">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap">
-            <div class="left align-items-center">
+            <div class="left ">
               <img class="left-img mb-3" :src="img1" alt="photo">
               <p class="content-title mt-4 font">Advantage & Personality</p>
               
@@ -48,11 +48,6 @@
 </template>
 
 <style lang="scss" scoped>
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
 
 .font{
   font-family: Noto, sans;
@@ -101,7 +96,6 @@
   text-align: center;
   color: white;
   width: 22.5vw;
-  
   line-height: 2vw;
 }
 
@@ -138,14 +132,15 @@
  */
 
 [role="main"] {
-  padding-top: 0px; /* Space for fixed navbar */
-  padding-left: 0px;
-  padding-right: 0px;
+   padding-top: 0%; /* Space for fixed navbar */
+   margin-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 0rem; /* Space for fixed navbar */
+     padding-top: 0%; /* Space for fixed navbar */
   }
 }
 

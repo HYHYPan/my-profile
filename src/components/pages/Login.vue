@@ -2,11 +2,7 @@
   <div>
 
    <!-- header -->
-   <header>
-      <NavBar/>
-      </header>
-      <br>
-      <br>
+  
      
     <main role="main ">
     

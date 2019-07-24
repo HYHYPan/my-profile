@@ -23,8 +23,7 @@
           >
             <h1 >Education</h1>
 
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-              <span data-feather="calendar"></span>
+            <button type="button" class="btn btn-sm btn-outline-secondary content-btn">
               Photo
             </button>
           </div>
@@ -127,7 +126,7 @@ Minor: Economics, Jun. 2013.
   text-transform: uppercase;
 }
 
-.btn {
+.content-btn {
   border-radius: 50rem;
 }
 

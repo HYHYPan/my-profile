@@ -7,7 +7,7 @@
           
         <div class="title-box">
           Account Manager
-            <button type="button" class="btn btn-sm btn-outline-secondary title-btn">
+            <button type="button" class="btn btn-sm btn-outline-secondary content-btn">
              
               Photo
             </button>
@@ -46,13 +46,9 @@ text-align: left;
   font-size: 2.3vw;
 }
 
-// .title-text{
-     
-//   margin:0px;
-// }
-
-.title-btn{
+.content-btn{
      margin-left: 6vw;
+     border-radius: 50rem;
 }
 
     .text-box {
@@ -60,10 +56,6 @@ text-align: left;
 
   text-align: center;
   
-}
-
-.btn {
-  border-radius: 50rem;
 }
 
 .text{

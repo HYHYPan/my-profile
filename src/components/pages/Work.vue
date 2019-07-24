@@ -11,14 +11,14 @@
 
                 <div class="btn-each">
                 <a href="#about" @click.prevent="getToPage('ov')">
-                  <button type="button" class="btn btn-outline-light btn-sm">
+                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
                     Overview
                   </button>
                 </a>
                 <!-- </div> -->
                 <!-- <div class="btn-each"> -->
                 <a href="#about" @click.prevent="getToPage('pd')">
-                  <button type="button" class="btn btn-outline-light btn-sm">
+                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
                     Program designer
                   </button>
                 </a>
@@ -26,7 +26,7 @@
 
                 <!-- <div class="btn-each"> -->
                 <a href="#about" @click.prevent="getToPage('am')">
-                  <button type="button" class="btn btn-outline-light btn-sm">
+                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
                     Account Manager
                   </button>
                 </a>
@@ -34,7 +34,7 @@
 
                 <!-- <div class="btn-each"> -->
                 <a href="#about" @click.prevent="getToPage('pp')">
-                  <button type="button" class="btn btn-outline-light btn-sm">
+                  <button type="button" class="btn btn-outline-light btn-sm content-btn">
                     Patent Paralegal
                   </button>
                 </a>
@@ -181,7 +181,7 @@ rect:hover {
   
 }
 
-.btn-sm {
+.content-btn {
   border-radius: 50rem;
 }
 
