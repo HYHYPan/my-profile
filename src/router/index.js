@@ -70,13 +70,14 @@ export default new Router({
           name: 'portfolio',
           component: Portfolio
         },
+        {
+          path: '/login',
+          name: 'login',
+          component: Login
+        },
       ]
     },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
+    
     {
       path: '/admin',
       name: 'admin',

@@ -6,8 +6,9 @@
     <!-- <div class="cuttan">
        <svg></svg>
     </div> -->
-
+     
      <router-view> </router-view>
+      
    
   </div>
 </template>
