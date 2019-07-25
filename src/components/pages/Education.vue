@@ -7,59 +7,139 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-text">Education</h1>
+              <h1 class="sidebar-tiltle font lighter">Education</h1>
 
-              <p class="sidebar-text">
-                Here is about my education, ability and certificate.
-              </p>
+              <p class="sidebar-text font">Here is about my education, ability and certificate.</p>
             </div>
           </div>
         </nav>
 
         <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center">
-          <div class="justify-content-between">
-          <div
-            class=" d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-          >
-            <h1 >Education</h1>
+          <div class="content justify-content-center">
+            <div
+              class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h2 class="font">Education</h2>
 
-            <button type="button" class="btn btn-sm btn-outline-secondary content-btn">
-              Photo
-            </button>
-          </div>
-          <div class="box box-content">
-            <h2>National Cheng Chi University (NCCU)</h2>
-          <p>
-           Bachelor of Chinese Literature, Jun. 2013.
-Minor: Economics, Jun. 2013.
-          </p>
-          </div>
-          </div>
-
-          <div class="justify-content-between">
-          <div
-            class=" d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-          >
-            <h1> Certificate & Ability </h1>
-
-          </div>
-          <div class="box box-content">
-            <h2>Basic Test on the FinTech Knowledge </h2>
-            <h2>BTOEIC Listening & Reading Test：790 points </h2>
-          </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary content-btn font justify-content-end"
+                data-toggle="modal"
+                data-target="#eduModal"
+                @click="openPhoto()"
+              >Photo</button>
+            </div>
+            <div class="box box-content">
+              <h3 class="font normal">National Cheng Chi University (NCCU)</h3>
+              <p class="font">
+                Bachelor of Chinese Literature, Jun. 2013.
+                Minor: Economics, Jun. 2013.
+              </p>
+            </div>
           </div>
 
+          <div class="content justify-content-center mt-5">
+            <div
+              class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h2 class="font">Certificate & Ability</h2>
+            </div>
+            <div class="box box-content">
+              <ul>
+                <li>
+                  <h4 class="font normal">Basic Test on the FinTech Knowledge</h4>
+                </li>
+                <li class="mt-2">
+                  <h4 class="font normal">TOEIC Test：790 points</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
         </main>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="eduModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="eduModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eduModalLabel">Photos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" >
+                <div class="modal-box carousel-item active" >
+              <img :src="img1" alt="img" class="modal-img d-block w-100">
+            </div>
+              <div class="modal-box carousel-item">
+              <img :src="img2" alt="img" class="modal-img d-block w-100">
+            </div>
+
+            </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <style lang="scss" scoped>
+html {
+  font-size: 15px;
+}
+
 .feather {
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+}
+
+.font {
+  font-family: Noto, sans;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+.normal {
+  font-weight: normal;
 }
 
 /*
@@ -93,6 +173,12 @@ Minor: Economics, Jun. 2013.
 
 .sidebar-text {
   color: white;
+  font-size: 1rem;
+}
+
+.sidebar-tiltle {
+  font-size: 3rem;
+  color: white;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -121,13 +207,10 @@ Minor: Economics, Jun. 2013.
   color: inherit;
 }
 
-.sidebar-heading {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
 .content-btn {
   border-radius: 50rem;
+  float:right;
+  
 }
 
 /*
@@ -142,19 +225,44 @@ Minor: Economics, Jun. 2013.
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 48px; /* Space for fixed navbar */
-    padding-right: 4vw;
-  padding-left: 4vw;
+    padding-top: 3rem; /* Space for fixed navbar */
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 
-.box {
-    padding-left: 6vw;
-    padding-right: 6vw;
+  .content {
+    margin: 4rem;
   }
-.border-bottom{
-  margin-left: 6vw;
-  margin-right: 6vw;
+
+  .box {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .border-bottom {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
+
+@media (max-width: 767px) {
+  [role="main"] {
+    padding-top: 3rem; /* Space for fixed navbar */
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .content {
+    margin-top: 2rem;
+  }
+
+  .box {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .border-bottom {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 </style>
 
@@ -165,17 +273,14 @@ export default {
   name: "Education",
   data() {
     return {
-      card1: "static/images/Service/social_media.jpg",
-      card2: "static/images/Service/f_logo_250.png",
-      card3: "static/images/Service/html5.png",
-      card4: "static/images/Service/head.png",
-      card5: "static/images/Service/photo.jpg",
-      card6: "static/images/Service/illustration.jpg"
+      img1: "static/images/Service/social_media.jpg",
+      img2: "static/images/Service/f_logo_250.png",
+      
     };
   },
   methods: {
-    buyNow() {
-      $("#productModal").modal("show");
+    openPhoto() {
+      $("#eduModal").modal("show");
     }
   }
 };
