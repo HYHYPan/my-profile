@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid">
+    <div class="container-fluid" >
       <div class="row">
         <!-- SideBar -->
 
@@ -12,7 +12,7 @@
               <div class="btn-each">
 
                     <a href="#about" @click.prevent="getToPage('ov')">
-                    <button type="button" class="btn btn-outline-light btn-sm content-btn">
+                    <button type="button" class="btn btn-outline-light btn-sm page-btn">
                     Overview
                      </button>
                     </a>
@@ -20,21 +20,21 @@
                 <a href="#about" @click.prevent="getToPage('pd')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm content-btn"
+                    class="btn btn-outline-light btn-sm page-btn"
                   >Program designer</button>
                 </a>
 
                 <a href="#about" @click.prevent="getToPage('am')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm content-btn"
+                    class="btn btn-outline-light btn-sm page-btn"
                   >Account Manager</button>
                 </a>
                 
                 <a href="#about" @click.prevent="getToPage('pp')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm content-btn"
+                    class="btn btn-outline-light btn-sm page-btn"
                   >Patent Paralegal</button>
                 </a>
               </div>
@@ -42,45 +42,33 @@
           </div>
         </nav>
 
+        <!-- main content -->
         <main
           role="main"
           class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center justify-content-center"
         >
-          <div class="d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center">
-            <!-- content of each page -->
-            <router-view></router-view>
+        <!-- @media (min-width: 768px) -->
+          <div class="box-lg d-flex flex-wrap 
+          flex-md-nowrap align-content-center justify-content-center" 
+          >
+            <router-view class="box-lg" ></router-view>
           </div>
+         
+         <!-- @media (max-width: 767px) -->
+          <div class="box-sm d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
+           >
+            <h1 class="title justify-content-center font box-sm" >Work experience</h1>
+            <OverView class="box-sm justify-content-center border-bottom-1"  ></OverView>
+            <ProgramDesigner class="box-sm justify-content-center" ></ProgramDesigner>
+            <AccountManager class="box-sm justify-content-center"  ></AccountManager>
+            <PatentParalegal class="box-sm justify-content-center" > </PatentParalegal>
+          </div> 
+
         </main>
       </div>
     </div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="worksModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLongTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Photos</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img :src="img1" alt="photos" class="photos">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Process to checkout</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </template>
 
@@ -94,8 +82,8 @@
   width: 200px;
 }
 
-rect:hover {
-  fill: rgb(65, 139, 207);
+.font{
+  font-family: Noto, sans;
 }
 
 .feather {
@@ -170,7 +158,7 @@ rect:hover {
   font-size: 4.5vw;
 }
 
-.content-btn {
+.page-btn {
   border-radius: 50rem;
 }
 
@@ -183,7 +171,6 @@ a {
 /*
  * Content
  */
-
 [role="main"] {
   padding-top: 40px; /* Space for fixed navbar */
   padding-left: 0px;
@@ -194,6 +181,27 @@ a {
   [role="main"] {
     padding-top: 0rem; /* Space for fixed navbar */
   }
+
+.box-lg{
+  justify-content: center;
+  align-items: center;
+}
+  .box-sm{
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  
+.box-lg{
+    display: none;
+  }
+
+  .box-sm{
+  align-items: center;
+  }
+
+
 }
 </style>
 
@@ -205,9 +213,15 @@ import AccountManager from "@/components/pages/work-pages/AccountManager";
 import PatentParalegal from "@/components/pages/work-pages/PatentParalegal";
 
 export default {
-  name: "Works",
+  // el:"#app",
+  name: "work",
   data() {
-    return {};
+    return {
+       windowSize: {
+        width: 0,
+        height: 0
+      }
+    };
   },
   components: {
     OverView,
@@ -226,7 +240,24 @@ export default {
       } else if (page === "pp") {
         this.$router.push("/work/patent-paralegal");
       }
-    }
+    },
+    getWindowSize(){
+     const ww = window.innerWidth;
+      const wh = window.innerHeight;
+      console.log(ww, wh);
+      this.windowSize = {
+        width: ww,
+        height: wh
+      }
+   
+    },
+    mounted () {
+
+   this.getWindowSize()
+    
+    window.addEventListener('resize', this.getWindowSize)
   }
-};
+
+}
+}
 </script>

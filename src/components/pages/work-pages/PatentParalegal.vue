@@ -1,9 +1,9 @@
 <template>
   <div>
     
-    <div class="text-box">
+    <div class="text-box content-box pt-5  align-content-center justify-content-center">
       <div class="title-box">
-        Account Manager
+        Patent Paralegal
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary title-btn"
@@ -25,12 +25,18 @@
     
     </div>
   </div>
+
+
+ 
+
+    
+
 </template>
 
 <style lang="scss" scoped>
 
 .image-box{
-  position: fixed;
+  // position: fixed;
   bottom: 0;
   z-index: 100; /* Behind the navbar */
     text-align: center;

@@ -1,13 +1,17 @@
 <template>
   
-    <div class="content pt-5  align-content-center justify-content-center">
+    <div class="content-box pt-5  align-content-center justify-content-center">
       <div class="main-image ">
         <img class="d-flex align-content-end left" :src="mainImage" alt="Main image">
       </div>
 
-      <div class="text align-content-center justify-content-center">
+      <div class="text-box align-content-center justify-content-center">
         <h1>Program designer</h1>
         <br>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-secondary title-btn"
+        >Photo</button>
         <p>BNP PARIBAS CARDIF</p>
 
         <p>July.2018 - Dec.2018 (temp worker)</p>
@@ -23,16 +27,29 @@
 </template>
 
 <style lang="scss" scoped>
+
+.content-box{
+  position: relative;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main-image{
-    
-    width: 35vw;
+    width: 50%;
   }
-.text {
-  font-weight: lighter;
+.font{
   font-family: Noto, sans;
+}
+.text-box {
+  font-weight: lighter;
   float: left;
   width: 50%;
-  padding-left: 1vw;
+  padding-left: 2%;
 }
 
 .left {
@@ -40,6 +57,8 @@
   width: 50%;
   padding: 0px;
 }
+
+
 </style>
 
 <script>
