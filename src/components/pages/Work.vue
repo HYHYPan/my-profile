@@ -50,18 +50,18 @@
         <!-- @media (min-width: 768px) -->
           <div class="box-lg d-flex flex-wrap 
           flex-md-nowrap align-content-center justify-content-center" 
-          >
-            <router-view class="box-lg" ></router-view>
+          v-if="windowSize.width >= 768">
+            <router-view class="box-lg" v-if="windowSize.width >= 768"></router-view>
           </div>
          
          <!-- @media (max-width: 767px) -->
           <div class="box-sm d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
-           >
-            <h1 class="title justify-content-center font box-sm" >Work experience</h1>
-            <OverView class="box-sm justify-content-center border-bottom-1"  ></OverView>
-            <ProgramDesigner class="box-sm justify-content-center" ></ProgramDesigner>
-            <AccountManager class="box-sm justify-content-center"  ></AccountManager>
-            <PatentParalegal class="box-sm justify-content-center" > </PatentParalegal>
+           v-if="windowSize.width <= 767">
+            <h1 class="title justify-content-center font box-sm" v-if="windowSize.width <= 767">Work experience</h1>
+            <OverView class="box-sm justify-content-center border-bottom-1"  v-if="windowSize.width <= 767"></OverView>
+            <ProgramDesigner class="box-sm justify-content-center" v-if="windowSize.width <= 767"></ProgramDesigner>
+            <AccountManager class="box-sm justify-content-center"  v-if="windowSize.width <= 767"></AccountManager>
+            <PatentParalegal class="box-sm justify-content-center"  v-if="windowSize.width <= 767"></PatentParalegal>
           </div> 
 
         </main>
