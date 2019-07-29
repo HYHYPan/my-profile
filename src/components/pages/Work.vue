@@ -50,18 +50,18 @@
         <!-- @media (min-width: 768px) -->
           <div class="box-lg d-flex flex-wrap 
           flex-md-nowrap align-content-center justify-content-center" 
-          v-if="windowSize.width >= 768">
-            <router-view class="box-lg" v-if="windowSize.width >= 768"></router-view>
+          v-if="screenWidth >= 768">
+            <router-view class="box-lg" v-if=" screenWidth >= 768"></router-view>
           </div>
          
          <!-- @media (max-width: 767px) -->
           <div class="box-sm d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
-           v-if="windowSize.width <= 767">
-            <h1 class="title justify-content-center font box-sm" v-if="windowSize.width <= 767">Work experience</h1>
-            <OverView class="box-sm justify-content-center border-bottom-1"  v-if="windowSize.width <= 767"></OverView>
-            <ProgramDesigner class="box-sm justify-content-center" v-if="windowSize.width <= 767"></ProgramDesigner>
-            <AccountManager class="box-sm justify-content-center"  v-if="windowSize.width <= 767"></AccountManager>
-            <PatentParalegal class="box-sm justify-content-center"  v-if="windowSize.width <= 767"></PatentParalegal>
+           v-if="screenWidth <= 767">
+            <h1 class="title justify-content-center font box-sm" v-if="screenWidth <= 767">Work experience</h1>
+            <OverView class="box-sm justify-content-center border-bottom-1"  v-if="screenWidth <= 767"></OverView>
+            <ProgramDesigner class="box-sm justify-content-center" v-if="screenWidth <= 767"></ProgramDesigner>
+            <AccountManager class="box-sm justify-content-center"  v-if="screenWidth <= 767"></AccountManager>
+            <PatentParalegal class="box-sm justify-content-center"  v-if="screenWidth<= 767"></PatentParalegal>
           </div> 
 
         </main>
@@ -213,21 +213,17 @@ import AccountManager from "@/components/pages/work-pages/AccountManager";
 import PatentParalegal from "@/components/pages/work-pages/PatentParalegal";
 
 export default {
-  // el:"#app",
   name: "work",
   data() {
     return {
-       windowSize: {
-        width: 0,
-        height: 0
-      }
+      screenWidth: window.innerWidth,
     };
   },
   components: {
     OverView,
     ProgramDesigner,
     AccountManager,
-    PatentParalegal
+    PatentParalegal,
   },
   methods: {
     getToPage(page) {
@@ -241,23 +237,42 @@ export default {
         this.$router.push("/work/patent-paralegal");
       }
     },
-    getWindowSize(){
-     const ww = window.innerWidth;
-      const wh = window.innerHeight;
-      console.log(ww, wh);
-      this.windowSize = {
-        width: ww,
-        height: wh
-      }
-   
+    setWidowWidth(){
+      const that = this;
+            window.onresize = () => {
+                return (() => {
+                    window.screenWidth = window.innerWidth
+                    that.screenWidth = window.screenWidth
+                })()
+            }
+          
     },
-    mounted () {
-
-   this.getWindowSize()
-    
-    window.addEventListener('resize', this.getWindowSize)
+    watchTheWidth(val){
+        if (!this.timer) {
+                    this.screenWidth = val;
+                    this.timer = true;
+                    let that = this;
+                    setTimeout(function () {
+                        console.log(that.screenWidth);
+                        that.timer = false;
+                    }, 400)
+                }
+    }
+},
+mounted() {
+     this.setWidowWidth();
+},
+watch: {
+  screenWidth:{
+    handler: 'watchTheWidth',
+    deep: true,
   }
+         
 
-}
+  
+
+},
+
+
 }
 </script>
