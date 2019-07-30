@@ -1,19 +1,19 @@
 <template>
   
-    <div class="content-box pt-5  align-content-center justify-content-center">
-      <div class="main-image ">
-        <img class="d-flex align-content-end left" :src="mainImage" alt="Main image">
+    <div class="content-box pt-5 d-flex">
+      <div class="main-image d-flex">
+        <img class="d-flex align-content-end" :src="mainImage" alt="Main image">
       </div>
 
-      <div class="text-box align-content-center justify-content-center">
-        <h1>Program designer</h1>
+      <div class="text-box font">
+        <h1 class="font font-weight-normal">Program designer</h1>
         <br>
+        
         <button
           type="button"
-          class="btn btn-sm btn-outline-secondary title-btn"
+          class="btn btn-sm btn-outline-secondary content-btn"
         >Photo</button>
         <p>BNP PARIBAS CARDIF</p>
-
         <p>July.2018 - Dec.2018 (temp worker)</p>
 
         <ul>
@@ -39,23 +39,22 @@
   justify-content: center;
   align-items: center;
 }
-.main-image{
-    width: 50%;
-  }
+
 .font{
   font-family: Noto, sans;
 }
+
 .text-box {
-  font-weight: lighter;
+  text-align: left;
+  
   float: left;
   width: 50%;
-  padding-left: 2%;
+  padding: 0 3%;
 }
 
-.left {
-  float: left;
-  width: 50%;
-  padding: 0px;
+.content-btn{
+  border-radius: 50rem;
+  float:right;
 }
 
 

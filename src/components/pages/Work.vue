@@ -12,7 +12,7 @@
               <div class="btn-each">
 
                     <a href="#about" @click.prevent="getToPage('ov')">
-                    <button type="button" class="btn btn-outline-light btn-sm page-btn">
+                    <button type="button" class="btn btn-outline-light btn-sm page-btn font-weight-light">
                     Overview
                      </button>
                     </a>
@@ -20,21 +20,21 @@
                 <a href="#about" @click.prevent="getToPage('pd')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm page-btn"
+                    class="btn btn-outline-light btn-sm page-btn font-weight-light"
                   >Program designer</button>
                 </a>
 
                 <a href="#about" @click.prevent="getToPage('am')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm page-btn"
+                    class="btn btn-outline-light btn-sm page-btn font-weight-light"
                   >Account Manager</button>
                 </a>
                 
                 <a href="#about" @click.prevent="getToPage('pp')">
                   <button
                     type="button"
-                    class="btn btn-outline-light btn-sm page-btn"
+                    class="btn btn-outline-light btn-sm page-btn font-weight-light"
                   >Patent Paralegal</button>
                 </a>
               </div>

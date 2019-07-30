@@ -7,9 +7,9 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-tiltle font lighter">Education</h1>
+              <h1 class="sidebar-tiltle font font-weight-light">Education</h1>
 
-              <p class="sidebar-text font">Here is about my education, ability and certificate.</p>
+              <p class="sidebar-text font font-weight-light">Here is about my education, ability and certificate.</p>
             </div>
           </div>
         </nav>
@@ -19,7 +19,7 @@
             <div
               class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
             >
-              <h2 class="font">Education</h2>
+              <h1 class="font font-weight-normal">Education</h1>
 
               <button
                 type="button"
@@ -30,7 +30,7 @@
               >Photo</button>
             </div>
             <div class="box box-content">
-              <h3 class="font normal">National Cheng Chi University (NCCU)</h3>
+              <h3 class="font font-weight-normal">National Cheng Chi University (NCCU)</h3>
               <p class="font">
                 Bachelor of Chinese Literature, Jun. 2013.
                 Minor: Economics, Jun. 2013.
@@ -42,15 +42,15 @@
             <div
               class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
             >
-              <h2 class="font">Certificate & Ability</h2>
+              <h1 class="font font-weight-normal">Certificate & Ability</h1>
             </div>
             <div class="box box-content">
               <ul>
                 <li>
-                  <h4 class="font normal">Basic Test on the FinTech Knowledge</h4>
+                  <h4 class="font font-weight-normal">Basic Test on the FinTech Knowledge</h4>
                 </li>
                 <li class="mt-2">
-                  <h4 class="font normal">TOEIC Test：790 points</h4>
+                  <h4 class="font font-weight-normal">TOEIC Test：790 points</h4>
                 </li>
               </ul>
             </div>
@@ -134,14 +134,6 @@ html {
   font-family: Noto, sans;
 }
 
-.lighter {
-  font-weight: lighter;
-}
-
-.normal {
-  font-weight: normal;
-}
-
 /*
  * Sidebar
  */
@@ -174,6 +166,7 @@ html {
 .sidebar-text {
   color: white;
   font-size: 1rem;
+  width: 15vw;
 }
 
 .sidebar-tiltle {
