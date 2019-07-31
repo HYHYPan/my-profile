@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="container-fluid" >
+    <div class="container-fluid">
       <div class="row">
         <!-- SideBar -->
 
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky d-flex">
             <div class="sidebar-box">
-              <h1 class="sidebar-text sidebar-title ">Work experience</h1>
+              <h1 class="sidebar-text sidebar-title">Work experience</h1>
 
               <div class="btn-each">
+                <a href="#about" @click.prevent="getToPage('ov')">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm page-btn font-weight-light"
+                  >Overview</button>
+                </a>
 
-                    <a href="#about" @click.prevent="getToPage('ov')">
-                    <button type="button" class="btn btn-outline-light btn-sm page-btn font-weight-light">
-                    Overview
-                     </button>
-                    </a>
- 
                 <a href="#about" @click.prevent="getToPage('pd')">
                   <button
                     type="button"
@@ -30,7 +30,7 @@
                     class="btn btn-outline-light btn-sm page-btn font-weight-light"
                   >Account Manager</button>
                 </a>
-                
+
                 <a href="#about" @click.prevent="getToPage('pp')">
                   <button
                     type="button"
@@ -45,30 +45,36 @@
         <!-- main content -->
         <main
           role="main"
-          class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center justify-content-center"
+          class="col-md-8 ml-sm-auto col-lg-8 align-items-center justify-content-center"
         >
-        <!-- @media (min-width: 768px) -->
-          <div class="box-lg d-flex flex-wrap 
-          flex-md-nowrap align-content-center justify-content-center" 
-          v-if="screenWidth >= 768">
+          <!-- @media (min-width: 768px) -->
+          <div
+            class="box-lg d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
+            v-if="screenWidth >= 768"
+          >
             <router-view class="box-lg" v-if=" screenWidth >= 768"></router-view>
           </div>
-         
-         <!-- @media (max-width: 767px) -->
-          <div class="box-sm d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
-           v-if="screenWidth <= 767">
-            <h1 class="title justify-content-center font box-sm" v-if="screenWidth <= 767">Work experience</h1>
-            <OverView class="box-sm justify-content-center border-bottom-1"  v-if="screenWidth <= 767"></OverView>
-            <ProgramDesigner class="box-sm justify-content-center" v-if="screenWidth <= 767"></ProgramDesigner>
-            <AccountManager class="box-sm justify-content-center"  v-if="screenWidth <= 767"></AccountManager>
-            <PatentParalegal class="box-sm justify-content-center"  v-if="screenWidth<= 767"></PatentParalegal>
-          </div> 
 
+          <!-- @media (max-width: 767px) -->
+          <div
+            class="d-flex flex-wrap flex-md-nowrap align-content-center justify-content-center"
+            v-if="screenWidth <= 767"
+          >
+            <h1
+              class="box-sm title justify-content-center font font-weight-normal"
+              v-if="screenWidth <= 767"
+            >Work experience</h1>
+            <OverView class="box-sm justify-content-center border-bottom" v-if="screenWidth <= 767"></OverView>
+            <ProgramDesigner class="box-sm justify-content-center" v-if="screenWidth <= 767"></ProgramDesigner>
+            <AccountManager
+              class="box-sm justify-content-center border-bottom"
+              v-if="screenWidth <= 767"
+            ></AccountManager>
+            <PatentParalegal class="box-sm justify-content-center box-bg" v-if="screenWidth<= 767"></PatentParalegal>
+          </div>
         </main>
       </div>
     </div>
-
-    
   </div>
 </template>
 
@@ -82,7 +88,7 @@
   width: 200px;
 }
 
-.font{
+.font {
   font-family: Noto, sans;
 }
 
@@ -165,7 +171,7 @@
 a {
   display: block;
   height: 2vw;
-  margin: 2vw
+  margin: 2vw;
 }
 
 /*
@@ -182,26 +188,28 @@ a {
     padding-top: 0rem; /* Space for fixed navbar */
   }
 
-.box-lg{
-  justify-content: center;
-  align-items: center;
-}
-  .box-sm{
+  .box-lg {
+    justify-content: center;
+    align-items: center;
+  }
+  .box-sm {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  
-.box-lg{
+  .box-lg {
     display: none;
   }
 
-  .box-sm{
-  align-items: center;
+  .box-sm {
+    align-items: center;
+    margin-bottom: 0rem;
   }
 
-
+  .border-bottom {
+    border-bottom: #96acc3 1rem solid;
+  }
 }
 </style>
 
@@ -216,14 +224,14 @@ export default {
   name: "work",
   data() {
     return {
-      screenWidth: window.innerWidth,
+      screenWidth: window.innerWidth
     };
   },
   components: {
     OverView,
     ProgramDesigner,
     AccountManager,
-    PatentParalegal,
+    PatentParalegal
   },
   methods: {
     getToPage(page) {
@@ -237,42 +245,35 @@ export default {
         this.$router.push("/work/patent-paralegal");
       }
     },
-    setWidowWidth(){
+    setWidowWidth() {
       const that = this;
-            window.onresize = () => {
-                return (() => {
-                    window.screenWidth = window.innerWidth
-                    that.screenWidth = window.screenWidth
-                })()
-            }
-          
+      window.onresize = () => {
+        return (() => {
+          window.screenWidth = window.innerWidth;
+          that.screenWidth = window.screenWidth;
+        })();
+      };
     },
-    watchTheWidth(val){
-        if (!this.timer) {
-                    this.screenWidth = val;
-                    this.timer = true;
-                    let that = this;
-                    setTimeout(function () {
-                        console.log(that.screenWidth);
-                        that.timer = false;
-                    }, 400)
-                }
+    watchTheWidth(val) {
+      if (!this.timer) {
+        this.screenWidth = val;
+        this.timer = true;
+        let that = this;
+        setTimeout(function() {
+          console.log(that.screenWidth);
+          that.timer = false;
+        }, 400);
+      }
     }
-},
-mounted() {
-     this.setWidowWidth();
-},
-watch: {
-  screenWidth:{
-    handler: 'watchTheWidth',
-    deep: true,
+  },
+  mounted() {
+    this.setWidowWidth();
+  },
+  watch: {
+    screenWidth: {
+      handler: "watchTheWidth",
+      deep: true
+    }
   }
-         
-
-  
-
-},
-
-
-}
+};
 </script>

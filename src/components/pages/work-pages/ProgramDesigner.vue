@@ -1,9 +1,9 @@
 <template>
   
     <div class="content-box pt-5 d-flex">
-      <div class="main-image d-flex">
-        <img class="d-flex align-content-end" :src="mainImage" alt="Main image">
-      </div>
+      <!-- <div class="main-image d-flex"> -->
+        <img class="d-flex align-content-end main-image" :src="mainImage" alt="Main image">
+      <!-- </div> -->
 
       <div class="text-box font">
         <h1 class="font font-weight-normal">Program designer</h1>
@@ -11,7 +11,8 @@
         
         <button
           type="button"
-          class="btn btn-sm btn-outline-secondary content-btn"
+          class="btn btn-sm btn-outline-secondary content-btn" data-toggle="modal" data-target="#Modal"
+          @click="openPhoto()"
         >Photo</button>
         <p>BNP PARIBAS CARDIF</p>
         <p>July.2018 - Dec.2018 (temp worker)</p>
@@ -22,6 +23,55 @@
           <li>Improve the programs and functions based on users’ feedbacks.</li>
         </ul>
       </div>
+
+<!-- Modal -->
+      <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" >
+                <div class="modal-box carousel-item active" >
+              <img :src="img1" alt="img" class="modal-img d-block w-100 h-55">
+            </div>
+              <div class="modal-box carousel-item">
+              <img :src="img2" alt="img" class="modal-img d-block w-50">
+            </div>
+
+            </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   
 </template>
@@ -39,7 +89,10 @@
   justify-content: center;
   align-items: center;
 }
-
+.main-image{
+   width: 30%;
+   float: left;
+}
 .font{
   font-family: Noto, sans;
 }
@@ -65,8 +118,15 @@ export default {
   name: "program-designer",
   data() {
     return {
-      mainImage: "static/images/Works/work2-img.png"
+      mainImage: "static/images/Works/program_designer/main-img.png",
+      img1:"static/images/Works/program_designer/reference.png",
+      img2:"static/images/Works/program_designer/reference2.png",
     };
+  },
+  methods: {
+    openPhoto() {
+      $("#Modal").modal("show");
+    }
   }
 };
 </script>
