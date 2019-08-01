@@ -1,15 +1,25 @@
 <template>
   <div>
 
-    <!-- NavBar -->
-    <NavBar></NavBar>
-
-    <!-- content of each page -->
-        <router-view></router-view>
-
-    <!-- start Curtain  -->
+    <!-- start curtan  -->
     
-    <!-- <Curtain></Curtain> -->
+    <nav class="col-md-11 d-none d-md-block sidebar">
+          <div class="sidebar-sticky col-md-4">
+            <div class="sidebar-box">
+              <h1 class="sidebar-title font">Hazel Pan</h1>
+              <p class="sidebar-text font mt-4">
+                A dreammaker and an altruist.
+                
+                <br>“ Life is a great big canvas, and you should throw all the paint on if you can ”
+              </p>
+            </div>
+          </div>
+          <button @click.prevent="goToAbout()"> >> </button>
+          <div class="sidebar-button">
+          <a href="#" @click.prevent="goToAbout()" > >> </a>
+          </div>
+        </nav>
+        
         
       </div>
    
@@ -96,31 +106,23 @@
 
 
 <script>
-import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
-import Curtain from "@/components/Curtain";
 import $ from "jquery";
 
 export default {
-  name: "Home",
+  name: "Curtain",
   data() {
     return {
-      banner1: "static/images/banner01.png",
-      banner2: "static/images/banner02.png",
-      banner3: "static/images/banner03.png",
-      aboutImg: "static/images/head-2.jpg",
-      row1: "static/images/logo.png",
-      row2: "static/images/html5.png",
-      row3: "static/images/illustration.jpg",
-      sideContent: ``
+      class: "col-md-11",
     };
   },
+  methods:{
+    goToAbout(){
+      
+      this.$router.push('/about');
+    }
+  }
 
-  components: {
-    NavBar,
-    SideBar,
-    Curtain
-  },
+  
 };
 </script>
 

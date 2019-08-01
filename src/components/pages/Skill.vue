@@ -286,8 +286,8 @@
 .box-img {
   text-align: center;
   // border: #707070 1px solid;
-  height: 15vw;
-  width: 15vw;
+  height: 15rem;
+  width: 15rem;
 }
 
 .modal-body, .modal-box{
