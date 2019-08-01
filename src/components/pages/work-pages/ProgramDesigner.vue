@@ -26,10 +26,10 @@
 
 <!-- Modal -->
       <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-lg d-flex" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Photo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -37,11 +37,14 @@
       <div class="modal-body">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" >
-                <div class="modal-box carousel-item active" >
-              <img :src="img1" alt="img" class="modal-img d-block w-100 h-55">
+                <div class="modal-box carousel-item active " >
+              <img :src="img1" alt="img" class="modal-img d-block w-100">
             </div>
               <div class="modal-box carousel-item">
-              <img :src="img2" alt="img" class="modal-img d-block w-50">
+              <img :src="img2" alt="img" class="modal-img d-block w-100">
+            </div>
+            <div class="modal-box carousel-item">
+              <img :src="img3" alt="img" class="modal-img d-block w-100">
             </div>
 
             </div>
@@ -109,7 +112,14 @@
   border-radius: 50rem;
   float:right;
 }
+.modal-body{
+  height:100%;
+}
 
+.modal-box{
+  
+  overflow:auto;
+}
 
 </style>
 
@@ -120,7 +130,8 @@ export default {
     return {
       mainImage: "static/images/Works/program_designer/main-img.png",
       img1:"static/images/Works/program_designer/reference.png",
-      img2:"static/images/Works/program_designer/reference2.png",
+      img2:"static/images/Works/program_designer/photo1.jpg",
+      img3:"static/images/Works/program_designer/photo2.jpg",
     };
   },
   methods: {
