@@ -4,7 +4,7 @@
       <nav class="navbar navbar-expand-md navbar-dark fixed-top flex-md-nowrap p-1 shadow">
         
         <img style="width:40px;" alt="logo" v-bind:src="logo">
-        <a class="navbar-brand mr-auto" href="#" @click.prevent="getToPage('/')">Hazel Pan</a>
+        <a class="navbar-brand mr-auto font" href="#" @click.prevent="getToPage('/')">Hazel Pan</a>
         
         <button type="button" class="menu-button">
          三
@@ -13,12 +13,12 @@
         <input type="checkbox" class="menu-button-checkbox">
         
         <ul class="nav justify-content-end">
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/about')">About</a></li>
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/education')">Education</a></li>
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/work')">Work experience</a></li>
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/skill')">Skills</a></li>
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/portfolio')">Portfolio</a></li>
-          <li><a class="nav-link nav-item" href="#" @click.prevent="getToPage('/login')">Login</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/about')">About</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/education')">Education</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/work')">Work experience</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/skill')">Skills</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/portfolio')">Portfolio</a></li>
+          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/login')">Login</a></li>
         </ul>
         
       </nav>
@@ -26,17 +26,18 @@
     <!-- start Curtain  -->
     <transition name="zoom">
           
-    <nav class="col-md-11 d-none d-md-block sidebar" v-if="change">
-          <div class="sidebar-sticky col-md-4">
-            <div class="sidebar-box">
+    <nav class="col-md-11  d-md-block sidebar" v-if="change">
+          <div class="sidebar-sticky col-md-12">
+            <div class="sidebar-box-left col-md-4">
               <h1 class="sidebar-title font">Hazel Pan</h1>
               <p class="sidebar-text font mt-4">
-                A dreammaker and an altruist.
-                
-                <br>“ Life is a great big canvas, and you should throw all the paint on if you can ”
+                “ Life is a great big canvas, and you should throw all the paint on if you can ”
+               - Danny Kaye
               </p>
             </div>
-             <button class="zoom-btn btn btn-primary" @click="zoomOut()" > >> </button>
+            <div class="sidebar-box-right col-md-8">
+             <button class="zoom-btn btn btn-primary font" @click="zoomOut()" > >> </button>
+             </div>
           </div>
         
         </nav>
@@ -49,6 +50,13 @@
 </template>
 
 <style lang="scss" scoped>
+html {
+  font-size: 15px;
+}
+
+.font{
+  font-family: Noto, sans;
+}
 
  .navbar{
    background: #6A7E91;
@@ -132,8 +140,6 @@
   border:0rem;
 }
 
-
-
 .sidebar-sticky {
   position: relative;
   top: 0;
@@ -146,21 +152,27 @@
   align-items: center;
 }
 
-.sidebar-box {
+.sidebar-box-left {
   text-align: center;
+}
+
+.sidebar-box-right {
+  text-align: right;
 }
 
 .sidebar-title {
   color: white;
   font-weight: lighter;
-  font-size: 5vw;
+  font-size: 4rem;
 }
 
 .sidebar-text {
   text-align: center;
   color: white;
-  width: 22.5vw;
-  line-height: 2vw;
+  font-size: 1.1rem;
+  width: 20rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {

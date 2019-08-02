@@ -7,7 +7,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-tiltle font font-weight-light">Education</h1>
+              <h1 class="sidebar-tiltle font font-weight-light ">Education</h1>
 
               <p class="sidebar-text font font-weight-light">Here is about my education, ability and certificate.</p>
             </div>
@@ -16,10 +16,14 @@
 
         <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4 align-items-center">
           <div class="content justify-content-center">
-            <div
+            
+              
+            
+            <div class="box box-content">
+              <div
               class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
             >
-              <h1 class="font font-weight-normal">Education</h1>
+              <h1 class="font font-weight-normal content-title">Education</h1>
 
               <button
                 type="button"
@@ -28,10 +32,9 @@
                 data-target="#eduModal"
                 @click="openPhoto()"
               >Photo</button>
-            </div>
-            <div class="box box-content">
-              <h3 class="font font-weight-normal">National Cheng Chi University (NCCU)</h3>
-              <p class="font">
+              </div>
+              <h3 class="font font-weight-normal content-title-2">National Cheng Chi University (NCCU)</h3>
+              <p class="font  ml-2">
                 Bachelor of Chinese Literature, Jun. 2013.
                 Minor: Economics, Jun. 2013.
               </p>
@@ -39,18 +42,19 @@
           </div>
 
           <div class="content justify-content-center mt-5">
-            <div
+            
+            <div class="box box-content">
+              <div
               class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
             >
-              <h1 class="font font-weight-normal">Certificate & Ability</h1>
+              <h1 class="font font-weight-normal content-title">Certificate & Ability</h1>
             </div>
-            <div class="box box-content">
-              <ul>
+              <ul class="ml-1">
                 <li>
-                  <h4 class="font font-weight-normal">Basic Test on the FinTech Knowledge</h4>
+                  <h4 class="font font-weight-normal content-title-2">Basic Test on the FinTech Knowledge</h4>
                 </li>
                 <li class="mt-2">
-                  <h4 class="font font-weight-normal">TOEIC Test：790 points</h4>
+                  <h4 class="font font-weight-normal content-title-2">TOEIC Test：790 points</h4>
                 </li>
               </ul>
             </div>
@@ -200,11 +204,7 @@ html {
   color: inherit;
 }
 
-.content-btn {
-  border-radius: 50rem;
-  float:right;
-  
-}
+
 
 /*
  * Content
@@ -216,23 +216,30 @@ html {
   padding-left: 4vw;
 }
 
+.content-btn {
+  border-radius: 50rem;
+  float:right;
+  margin-left: 2vw;
+  
+}
 @media (min-width: 768px) {
   [role="main"] {
     padding-top: 3rem; /* Space for fixed navbar */
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 4vw;
+    padding-left: 4vw;
   }
 
   .content {
     margin: 4rem;
   }
 
+
   .box {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left:  3rem;
+    padding-right: 3rem;
   }
   .border-bottom {
-    margin-left: 5rem;
+    margin-left: 0rem;
     margin-right: 5rem;
   }
 }
@@ -247,14 +254,23 @@ html {
   .content {
     margin-top: 2rem;
   }
+  .content-title{
+  
+  font-size: 2rem;
+   } 
+
+   .content-title-2{
+     font-size: 1.5rem;
+   }
+
 
   .box {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .border-bottom {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0rem;
+    margin-right: 3rem;
   }
 }
 </style>

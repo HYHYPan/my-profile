@@ -9,20 +9,21 @@
 </template>
 
 <style lang="scss" scoped>
+html {
+  font-size: 15px;
+}
 </style>
 
 
 
 <script>
 import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
 import $ from "jquery";
 
 export default {
   name: "Home",
   components: {
     NavBar,
-    SideBar
   }
 };
 </script>

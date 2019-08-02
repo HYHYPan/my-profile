@@ -161,7 +161,7 @@
 }
 
 .sidebar-title {
-  font-size: 4.5vw;
+  font-size: 4rem;
 }
 
 .page-btn {

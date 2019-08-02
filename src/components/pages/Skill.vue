@@ -226,7 +226,8 @@
 
 .sidebar-text {
   color: white;
-  width: 15vw;
+  font-size: 1.1rem;
+  width: 20rem;
   font-weight: lighter;
   font-family: Noto, sans;
 }

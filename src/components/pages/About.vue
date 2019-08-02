@@ -9,9 +9,8 @@
             <div class="sidebar-box">
               <h1 class="sidebar-title font">Hazel Pan</h1>
               <p class="sidebar-text font mt-4">
-                A dreammaker and an altruist.
-                
-                <br>“ Life is a great big canvas, and you should throw all the paint on if you can ”
+              “ Life is a great big canvas, and you should throw all the paint on if you can ”
+               - Danny Kaye
               </p>
             </div>
           </div>
@@ -84,6 +83,9 @@
 </template>
 
 <style lang="scss" scoped>
+html {
+  font-size: 15px;
+}
 
 .font{
   font-family: Noto, sans;
@@ -100,7 +102,7 @@
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  // box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   background-color: #2a4764;
 }
@@ -125,14 +127,16 @@
 .sidebar-title {
   color: white;
   font-weight: lighter;
-  font-size: 5vw;
+  font-size: 4rem;
 }
 
 .sidebar-text {
   text-align: center;
   color: white;
-  width: 22.5vw;
-  line-height: 2vw;
+  font-size: 1.1rem;
+  width: 20rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -160,8 +164,6 @@
 .sidebar .nav-link.active .feather {
   color: inherit;
 }
-
-
 
 /*
  * Content
@@ -225,7 +227,7 @@
 .content-title{
   text-align: center;
   padding: 0%;
-  font-size: 2em;
+  font-size: 2rem;
 }
 .content-text {
   padding: 0 3vw;
