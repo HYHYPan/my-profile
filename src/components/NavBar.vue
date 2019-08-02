@@ -28,15 +28,15 @@
           
     <nav class="col-md-11  d-md-block sidebar" v-if="change">
           <div class="sidebar-sticky col-md-12">
-            <div class="sidebar-box-left col-md-4">
-              <h1 class="sidebar-title font">Hazel Pan</h1>
-              <p class="sidebar-text font mt-4">
+            <div class="sidebar-box-left col-md-4 ml-1">
+              <h1 class="sidebar-title font ml-2">Hazel Pan</h1>
+              <p class="sidebar-text font mt-4 ml-5">
                 “ Life is a great big canvas, and you should throw all the paint on if you can ”
                - Danny Kaye
               </p>
             </div>
             <div class="sidebar-box-right col-md-8">
-             <button class="zoom-btn btn btn-primary font" @click="zoomOut()" > >> </button>
+             <button class="zoom-btn btn font" @click="zoomOut()" > >> </button>
              </div>
           </div>
         
@@ -66,6 +66,15 @@ html {
   color: white;
   font-family: Noto, sans;
 }
+
+.zoom-btn{
+  font-size: 2.5rem;
+  color: white;
+}
+.zoom-btn:hover{
+   text-shadow: 0px 0px 5px white;
+}
+
 
 @media screen and (min-width: 1024px) {
   .menu-button,
@@ -145,15 +154,18 @@ html {
   top: 0;
   height: calc(100vh - 48px);
   padding-top: 0.5rem;
-  text-align: left;
+  text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   display: flex;
   align-items: center;
+   justify-content: center;
 }
 
 .sidebar-box-left {
   text-align: center;
+  padding:0rem;
+ justify-content: center;
 }
 
 .sidebar-box-right {
@@ -164,15 +176,19 @@ html {
   color: white;
   font-weight: lighter;
   font-size: 4rem;
+  margin: 0rem;
 }
 
 .sidebar-text {
+  justify-content: center;
   text-align: center;
   color: white;
   font-size: 1.1rem;
   width: 20rem;
   line-height: 1.5rem;
   font-weight: lighter;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -230,12 +246,14 @@ export default {
     return {
       logo: "static/images/logo.png",
        change: true,
+       currentRoute: this.$router.name,
+
     };
   },
   
   methods: {
     getToPage(page){
-      if(page=='/'){
+      if(page=='/' ){
         this.change = true;
       }else{
         this.change = false;
@@ -245,8 +263,27 @@ export default {
     zoomOut(){
       this.change = !this.change;
       this.$router.push('/about');
+      
     },
-  }
+    reload () {
+    //if(router.go(0)){
+      if(currentRoute == "Home" ){
+      
+      this.change = true;
+    //  this.$nextTick(() => (this.change = true))
+    }else{
+      this.change = false;
+    }
+   // }
+    
+     
+   }
+  },
+  mounted() {
+    this.$nextTick(function () {
+        this.getToPage(page);
+      })
+  },
 };
 </script>
 

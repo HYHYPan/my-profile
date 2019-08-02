@@ -7,7 +7,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-tiltle font font-weight-light ">Education</h1>
+              <h1 class="sidebar-tiltle font font-weight-light">Education</h1>
 
               <p class="sidebar-text font font-weight-light">Here is about my education, ability and certificate.</p>
             </div>
@@ -72,7 +72,7 @@
       aria-labelledby="eduModal"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog " role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="eduModalLabel">Photos</h5>
@@ -204,6 +204,22 @@ html {
   color: inherit;
 }
 
+/*
+ * modal
+ */
+
+#carouselExampleControls{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+}
+.modal-img {
+  width: auto;
+	height: auto;
+	overflow:auto;
+ 
+}
 
 
 /*

@@ -26,7 +26,7 @@
 
 <!-- Modal -->
       <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg d-flex" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Photo</h5>
@@ -112,13 +112,26 @@
   border-radius: 50rem;
   float:right;
 }
-.modal-body{
-  height:100%;
-}
+
+/*
+ * modal
+ */
+
 
 .modal-box{
-  
   overflow:auto;
+}
+#carouselExampleControls{
+  text-align: center;
+  // width: 100%;
+  height: 100%;
+  overflow:auto;
+}
+.modal-img {
+  width: auto;
+	height: auto;
+	overflow:auto;
+ 
 }
 
 </style>
