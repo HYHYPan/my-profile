@@ -23,7 +23,25 @@
         
       </nav>
     </header>
-
+    <!-- start Curtain  -->
+    <transition name="zoom">
+          
+    <nav class="col-md-11 d-none d-md-block sidebar" v-if="change">
+          <div class="sidebar-sticky col-md-4">
+            <div class="sidebar-box">
+              <h1 class="sidebar-title font">Hazel Pan</h1>
+              <p class="sidebar-text font mt-4">
+                A dreammaker and an altruist.
+                
+                <br>“ Life is a great big canvas, and you should throw all the paint on if you can ”
+              </p>
+            </div>
+             <button class="zoom-btn btn btn-primary" @click="zoomOut()" > >> </button>
+          </div>
+        
+        </nav>
+       
+        </transition>  
     
 
 
@@ -73,9 +91,7 @@
     display: block;
   }
 
-  // .navbar{
-  //   height: 40px;
-  // }
+  
   .nav {
     display: none;
     margin-top: 0;
@@ -97,10 +113,92 @@
   background:#6A7E91;
 }
 
-  /*
-    往下繼續手機版 css code
-  */
 }
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: 2rem 0 0 #527598;
+  height: 100%;
+  background-color: #2a4764;
+  border:0rem;
+}
+
+
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-box {
+  text-align: center;
+}
+
+.sidebar-title {
+  color: white;
+  font-weight: lighter;
+  font-size: 5vw;
+}
+
+.sidebar-text {
+  text-align: center;
+  color: white;
+  width: 22.5vw;
+  line-height: 2vw;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: white;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+// The transition
+
+  .zoom-enter, .zoom-leave-to {
+    width: 0px;
+
+  }
+  .zoom-enter-active, .zoom-leave-active {
+    transition: width 1s, height 0s; 
+    transition-duration: 2s;
+  }
 
 
 </style>
@@ -119,13 +217,22 @@ export default {
   data() {
     return {
       logo: "static/images/logo.png",
-      
+       change: true,
     };
   },
   
   methods: {
     getToPage(page){
+      if(page=='/'){
+        this.change = true;
+      }else{
+        this.change = false;
+      }
       this.$router.push(page);
+    },
+    zoomOut(){
+      this.change = !this.change;
+      this.$router.push('/about');
     },
   }
 };

@@ -1,96 +1,14 @@
 <template>
   <div>
-
     <!-- NavBar -->
     <NavBar></NavBar>
 
     <!-- content of each page -->
-        <router-view></router-view>
-
-    <!-- start Curtain  -->
-    
-    <!-- <Curtain></Curtain> -->
-        
-      </div>
-   
- 
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-/*
- * Sidebar
- */
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-  box-shadow: 2rem 0 0 #527598;
-  height: 100%;
-  background-color: #2a4764;
-  border:0rem;
-}
-
-
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: 0.5rem;
-  text-align: left;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-}
-
-.sidebar-box {
-  text-align: center;
-}
-
-.sidebar-title {
-  color: white;
-  font-weight: lighter;
-  font-size: 5vw;
-}
-
-.sidebar-text {
-  text-align: center;
-  color: white;
-  width: 22.5vw;
-  line-height: 2vw;
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-.sidebar .nav-link {
-  font-weight: 500;
-  color: #333;
-}
-
-.sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #999;
-}
-
-.sidebar .nav-link.active {
-  color: white;
-}
-
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-  color: inherit;
-}
 </style>
 
 
@@ -98,29 +16,14 @@
 <script>
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
-import Curtain from "@/components/Curtain";
 import $ from "jquery";
 
 export default {
   name: "Home",
-  data() {
-    return {
-      banner1: "static/images/banner01.png",
-      banner2: "static/images/banner02.png",
-      banner3: "static/images/banner03.png",
-      aboutImg: "static/images/head-2.jpg",
-      row1: "static/images/logo.png",
-      row2: "static/images/html5.png",
-      row3: "static/images/illustration.jpg",
-      sideContent: ``
-    };
-  },
-
   components: {
     NavBar,
-    SideBar,
-    Curtain
-  },
+    SideBar
+  }
 };
 </script>
 

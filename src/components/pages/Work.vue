@@ -109,7 +109,7 @@
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  // box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   background-color: #2a4764;
   line-height: 100px;
