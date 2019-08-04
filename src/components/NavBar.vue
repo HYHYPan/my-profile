@@ -21,6 +21,7 @@
           </li>
         </ul>
         <!-- @media screen and (max-width: 1023px) -->
+        
         <ul class="nav nav-hamburger justify-content-end" v-if="hamburger">
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/about')">About</a></li>
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/education')">Education</a>
@@ -34,6 +35,8 @@
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/login')">Login</a>
           </li>
         </ul>
+
+        <div class="nav-bg" v-if="hamburger" @click="changeHamburger()"></div>
       </nav>
     </header>
    
@@ -69,7 +72,8 @@ html {
 @media screen and (min-width: 1024px) {
   .menu-button,
   .menu-button-checkbox,
-  .nav-hamburger {
+  .nav-hamburger,
+  .nav-bg {
     display: none;
   }
 }
@@ -98,15 +102,28 @@ html {
   }
 
   .nav-hamburger {
+    z-index: 100;
     display: block;
     margin-top: 0;
     padding-left: 0;
     position: fixed;
     right: 0;
-    top: 44px;
+    top: 45px;
     width: 150px;
     height: 100%;
     background: #3d6892;
+  }
+  .nav-bg{
+    z-index: 99;
+    top: 45px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.0;
+    background-color: #fff;
   }
 
   .nav-item {
