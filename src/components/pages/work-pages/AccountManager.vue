@@ -9,7 +9,7 @@
         <button
           type="button"
           class="right btn btn-sm btn-outline-secondary content-btn "
-          data-toggle="modal" data-target="#Modal"
+          data-toggle="modal" data-target="#amModal"
           @click="openPhoto()"
         >Photo</button>
       </div>
@@ -27,25 +27,24 @@
     </div>
 
     <!-- Modal -->
-      <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal fade bd-example-modal-lg" id="amModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Photo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" >
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" >
-                <div class="modal-box carousel-item active" >
+                <div class="modal-box carousel-item active">
               <img :src="img1" alt="img" class="modal-img d-block w-100">
             </div>
-              <div class="modal-box carousel-item">
-              <img :src="img2" alt="img" class="modal-img d-block w-100">
+                <div class="modal-box carousel-item" v-for="item in carousel" :key="item" >
+              <img :src="item.img" alt="img" class="modal-img d-block w-100">
             </div>
-
             </div>
               <a
                 class="carousel-control-prev"
@@ -119,6 +118,25 @@ align-items: center;
   padding: 0rem 15rem;
 }
 
+/*
+ * modal
+ */
+.modal-box{
+  overflow:auto;
+}
+#carouselExampleControls{
+  text-align: center;
+  height: 100%;
+  overflow:auto;
+  margin: 0%;
+}
+.modal-img {
+  width: auto;
+	height: auto;
+	overflow:auto;
+ 
+}
+
 </style>
 
 <script>
@@ -127,8 +145,13 @@ export default {
   data() {
     return {
       mainImage: "static/images/Works/account_manager/main-img.png",
-      img1:"static/images/Works/program_designer/reference.png",
-      img2:"static/images/Works/program_designer/reference2.png",
+      img1:"static/images/Works/account_manager/success_story.png",
+      carousel:[ 
+      {img:"static/images/Works/account_manager/photo2.png"},
+      {img:"static/images/Works/account_manager/photo3.png"},
+      {img:"static/images/Works/account_manager/photo4.png"},
+      {img:"static/images/Works/account_manager/photo5.jpg"},
+      ]
     };
   },
   methods: {

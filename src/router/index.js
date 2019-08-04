@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/Home'
+import Curtain from '@/components/pages/Curtain'
 import Login from '@/components/pages/Login'
 import Admin from '@/components/pages/Admin'
 import Education from '@/components/pages/Education'
@@ -19,10 +20,15 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'Home',
       component: Home,
       children:[
+        {
+          path: '/',
+          name: 'curtain',
+          component:Curtain, 
+        },
         {
           path: '/about',
           name: 'about',
@@ -39,7 +45,7 @@ export default new Router({
           component: Work,
           children:[
             {
-              path: '',
+              path: '/',
               name: 'overview',
               component: OverView
             },

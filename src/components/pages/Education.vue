@@ -207,12 +207,14 @@ html {
 /*
  * modal
  */
-
+.modal-box{
+  overflow:auto;
+}
 #carouselExampleControls{
   text-align: center;
-  width: 100%;
   height: 100%;
   overflow:auto;
+  margin: 0%;
 }
 .modal-img {
   width: auto;
@@ -298,8 +300,8 @@ export default {
   name: "Education",
   data() {
     return {
-      img1: "static/images/Service/social_media.jpg",
-      img2: "static/images/Service/f_logo_250.png",
+      img1: "static/images/Education/Photo1.jpg",
+      img2: "static/images/Education/Photo2.jpg",
       
     };
   },
