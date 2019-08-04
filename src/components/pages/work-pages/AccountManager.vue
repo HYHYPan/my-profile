@@ -27,7 +27,7 @@
     </div>
 
     <!-- Modal -->
-      <div class="modal fade bd-example-modal-lg" id="amModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade " id="amModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog " role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -37,18 +37,18 @@
         </button>
       </div>
       <div class="modal-body" >
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" >
                 <div class="modal-box carousel-item active">
-              <img :src="img1" alt="img" class="modal-img d-block w-100">
-            </div>
-                <div class="modal-box carousel-item" v-for="item in carousel" :key="item" >
-              <img :src="item.img" alt="img" class="modal-img d-block w-100">
-            </div>
+                  <img :src="img1" alt="img" class="modal-img d-block w-100">
+                </div>
+                 <div class="modal-box carousel-item " v-for="item in carousel" :key="item">
+                  <img :src="item.img" alt="img" class="modal-img d-block w-100">
+                </div>
             </div>
               <a
                 class="carousel-control-prev"
-                href="#carouselExampleControls"
+                href="#carouselExampleControls2"
                 role="button"
                 data-slide="prev"
               >
@@ -57,7 +57,7 @@
               </a>
               <a
                 class="carousel-control-next"
-                href="#carouselExampleControls"
+                href="#carouselExampleControls2"
                 role="button"
                 data-slide="next"
               >
@@ -68,7 +68,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -128,7 +127,6 @@ align-items: center;
   text-align: center;
   height: 100%;
   overflow:auto;
-  margin: 0%;
 }
 .modal-img {
   width: auto;
@@ -146,6 +144,10 @@ export default {
     return {
       mainImage: "static/images/Works/account_manager/main-img.png",
       img1:"static/images/Works/account_manager/success_story.png",
+      img2:"static/images/Works/account_manager/photo2.png",
+      img3:"static/images/Works/account_manager/photo3.png",
+      img4:"static/images/Works/account_manager/photo4.png",
+      img5:"static/images/Works/account_manager/photo5.jpg",
       carousel:[ 
       {img:"static/images/Works/account_manager/photo2.png"},
       {img:"static/images/Works/account_manager/photo3.png"},
