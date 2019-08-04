@@ -8,7 +8,7 @@
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary title-btn"
-          data-toggle="modal" data-target="#Modal"
+          data-toggle="modal" data-target="#ppModal"
           @click="openPhoto()"
         >Photo</button>
       </div>
@@ -29,17 +29,17 @@
     </div>
 
     <!-- Modal -->
-      <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade " id="ppModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Photo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" >
                 <div class="modal-box carousel-item active" >
               <img :src="img1" alt="img" class="modal-img d-block w-100">
@@ -51,7 +51,7 @@
             </div>
               <a
                 class="carousel-control-prev"
-                href="#carouselExampleControls"
+                href="#carouselExampleControls3"
                 role="button"
                 data-slide="prev"
               >
@@ -60,7 +60,7 @@
               </a>
               <a
                 class="carousel-control-next"
-                href="#carouselExampleControls"
+                href="#carouselExampleControls3"
                 role="button"
                 data-slide="next"
               >
@@ -124,6 +124,28 @@ text-align: left;
 .text{
   text-align: left;
   padding: 0 20vw;
+}
+
+
+/*
+ * modal
+ */
+
+
+.modal-box{
+  overflow:auto;
+}
+#carouselExampleControls{
+  text-align: center;
+  // width: 100%;
+  height: 100%;
+  overflow:auto;
+}
+.modal-img {
+  width: auto;
+	height: auto;
+	overflow:auto;
+ 
 }
 </style>
 
