@@ -3,16 +3,16 @@
     
     <div class="text-box content-box pt-5  align-content-center justify-content-center">
       <div class="title-box">
-        <h1 class="font font-weight-normal">Patent Paralegal</h1>
+        <h1 class="font font-weight-normal left">Patent Paralegal</h1>
         
         <button
           type="button"
-          class="btn btn-sm btn-outline-secondary title-btn"
+          class="btn btn-sm btn-outline-secondary title-btn right"
           data-toggle="modal" data-target="#ppModal"
           @click="openPhoto()"
         >Photo</button>
       </div>
-
+      <div class="text-box">
       <div class="text">
         <p>SAYA Network Co., Ltd</p>
         <p>Jul.2015 - Dec.2017</p>
@@ -27,10 +27,11 @@
       <img class="main-image" :src="mainImage" alt="Main image">
     
     </div>
+    </div>
 
     <!-- Modal -->
       <div class="modal fade " id="ppModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Photo</h5>
@@ -87,8 +88,8 @@
 .image-box{
   // position: fixed;
   bottom: 0;
-  z-index: 100; /* Behind the navbar */
-    text-align: center;
+  // z-index: 100; /* Behind the navbar */
+  text-align: center;
    
 }
 
@@ -101,11 +102,11 @@
     .title-box{
   border-bottom:1px #2a4764 solid; 
   padding-bottom:5px; 
-  margin: 2vw 15vw; 
+  margin:  2rem 14rem; 
   // font-weight: lighter;
   font-family: Noto, sans;
 text-align: left;
-  font-size: 2.3vw;
+  // font-size: 2.3vw;
 }
 
 .title-btn{

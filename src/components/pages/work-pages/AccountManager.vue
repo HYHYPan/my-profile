@@ -144,10 +144,6 @@ export default {
     return {
       mainImage: "static/images/Works/account_manager/main-img.png",
       img1:"static/images/Works/account_manager/success_story.png",
-      img2:"static/images/Works/account_manager/photo2.png",
-      img3:"static/images/Works/account_manager/photo3.png",
-      img4:"static/images/Works/account_manager/photo4.png",
-      img5:"static/images/Works/account_manager/photo5.jpg",
       carousel:[ 
       {img:"static/images/Works/account_manager/photo2.png"},
       {img:"static/images/Works/account_manager/photo3.png"},
