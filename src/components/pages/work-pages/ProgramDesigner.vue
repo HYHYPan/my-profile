@@ -11,7 +11,7 @@
         
         <button
           type="button"
-          class="btn btn-sm btn-outline-secondary content-btn" data-toggle="modal" data-target="#Modal"
+          class="btn btn-sm btn-outline-secondary content-btn" data-toggle="modal" data-target="#pdModal"
           @click="openPhoto()"
         >Photo</button>
         <p>BNP PARIBAS CARDIF</p>
@@ -25,7 +25,7 @@
       </div>
 
 <!-- Modal -->
-      <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade bd-example-modal-lg" id="pdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
