@@ -1,13 +1,13 @@
 <template>
   
-    <div class="content-box pt-5 d-flex">
+    <div class="content-box d-flex">
       <!-- <div class="main-image d-flex"> -->
-        <img class="d-flex align-content-end main-image" :src="mainImage" alt="Main image">
+        <img class=" main-image" :src="mainImage" alt="Main image">
       <!-- </div> -->
 
       <div class="text-box font">
-        <h1 class="font font-weight-normal">Program designer</h1>
-        <br>
+        <p class="content-title font font-weight-normal">Program designer</p>
+        <!-- <br> -->
         
         <button
           type="button"
@@ -25,7 +25,7 @@
       </div>
 
 <!-- Modal -->
-      <div class="modal fade bd-example-modal-lg" id="pdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="pdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -70,7 +70,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -80,32 +79,28 @@
 </template>
 
 <style lang="scss" scoped>
-
-.content-box{
-  position: relative;
-  height: calc(100vh - 48px);
-  padding-top: 0.5rem;
-  text-align: center;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html {
+  font-size: 15px;
 }
+
 .main-image{
    width: 30%;
    float: left;
 }
+
 .font{
   font-family: Noto, sans;
 }
 
+.content-title{
+  font-size: 2rem;
+}
+
 .text-box {
   text-align: left;
-  
   float: left;
   width: 50%;
-  padding: 0 3%;
+  padding: 0% 3%;
 }
 
 .content-btn{
@@ -113,6 +108,31 @@
   float:right;
 }
 
+@media (min-width: 768px) {
+  .content-box{
+  position: relative;
+  height: calc(100vh - 48px);
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  }
+
+@media (max-width: 767px) {
+  .content-box{
+  position: relative;
+  height: 80vh;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
 /*
  * modal
  */
@@ -126,6 +146,7 @@
   // width: 100%;
   height: 100%;
   overflow:auto;
+   margin: 0rem;
 }
 .modal-img {
   width: auto;

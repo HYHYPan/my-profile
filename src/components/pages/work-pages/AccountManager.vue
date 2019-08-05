@@ -1,16 +1,16 @@
 <template>
-  <div class="content-box  d-flex flex-column">
+  <div class="content-box d-flex flex-column">
     <!-- <div class="content-box"> -->
       <!-- <div class="d-flex" id="work-am"> -->
       <img class="main-image" :src="mainImage" alt="Main image">
       <!-- </div> -->
 
       <div class="text-box">
-        <div class="title-box font">
-          <h1 class="left font font-weight-normal">Account Manager</h1>
+        <div class="title-box font justify-content-between align-items-center">
+          <p class="content-title font font-weight-normal">Account Manager</p>
           <button
             type="button"
-            class="right btn btn-sm btn-outline-secondary content-btn"
+            class="btn btn-sm btn-outline-secondary content-btn"
             data-toggle="modal"
             data-target="#amModal"
             @click="openPhoto()"
@@ -86,6 +86,10 @@
 </template>
 
 <style lang="scss" scoped>
+html {
+  font-size: 15px;
+}
+
 .font {
   font-family: Noto, sans;
 }
@@ -93,7 +97,7 @@
 .content-box {
   position: relative;
   height: 100%;
-  padding-top: 0.5rem;
+  // padding-top: 0.5rem;
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -101,37 +105,48 @@
   justify-content: center;
   align-items: center;
 }
+
 .main-image {
   width: 100%;
 }
 
 .title-box {
   border-bottom: 1px #2a4764 solid;
-  margin: 2rem 14rem;
   text-align: left;
-  // display: inline-block ;
   display: flex;
   align-items: center;
+ 
 }
-.left {
-  margin-right: 3rem;
-  float: left;
+
+.content-title{
+  font-size: 2rem;
 }
-.right {
-  float: left;
-  align-items: center;
-}
+
 
 .content-btn {
   border-radius: 50rem;
 }
 
 .text {
-  // border-top: 1px #2a4764 solid;
-  // padding-bottom: 5px;
   text-align: left;
-  padding: 0rem 15rem;
+  padding-top: 1rem ;
 }
+
+
+@media (min-width: 768px) {
+  .text-box{
+  margin: 2rem 12rem;
+}
+
+}
+
+@media (max-width: 767px) {
+  .text-box{
+  margin: 2rem 4rem;
+}
+
+}
+
 
 /*
  * modal
@@ -139,10 +154,12 @@
 .modal-box {
   overflow: auto;
 }
-#carouselExampleControls {
+#carouselExampleControls2 {
   text-align: center;
   height: 100%;
   overflow: auto;
+  margin: 0rem;
+  align-items: center;
 }
 .modal-img {
   width: auto;
@@ -159,10 +176,13 @@ export default {
       mainImage: "static/images/Works/account_manager/main-img.png",
       img1: "static/images/Works/account_manager/success_story.png",
       carousel: [
+        { img: "static/images/Works/account_manager/photo6.jpg" },
+        { img: "static/images/Works/account_manager/photo7.jpg" },
+        { img: "static/images/Works/account_manager/photo8.jpg" },
         { img: "static/images/Works/account_manager/photo2.png" },
         { img: "static/images/Works/account_manager/photo3.png" },
         { img: "static/images/Works/account_manager/photo4.png" },
-        { img: "static/images/Works/account_manager/photo5.jpg" }
+        { img: "static/images/Works/account_manager/photo5.jpg" },
       ]
     };
   },
