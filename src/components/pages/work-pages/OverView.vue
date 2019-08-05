@@ -11,7 +11,7 @@
 
 .content-box{
  position: relative;
-  height: calc(100vh - 48px);
+  height: 100%;
   padding-top: 0.5rem;
   text-align: center;
   overflow-x: hidden;

@@ -166,7 +166,7 @@ export default {
       } else {
         this.change = false;
       }
-      // this.hamburger = false;
+      this.hamburger = false;
       this.$router.push(page);
       
     },
