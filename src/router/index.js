@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/Home'
 import Curtain from '@/components/pages/Curtain'
-import Login from '@/components/pages/Login'
 import Admin from '@/components/pages/Admin'
 import Education from '@/components/pages/Education'
 import Work from '@/components/pages/Work'
@@ -76,18 +75,7 @@ export default new Router({
           name: 'portfolio',
           component: Portfolio
         },
-        {
-          path: '/login',
-          name: 'login',
-          component: Login
-        },
       ]
-    },
-    
-    {
-      path: '/admin',
-      name: 'admin',
-      component: Admin
     },
   ]
 })
