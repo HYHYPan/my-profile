@@ -6,7 +6,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-title">Skill</h1>
+              <h1 class="sidebar-title ">Skill</h1>
               <p
                 class="sidebar-text"
               >There are four main groups of my skills : Program, Design, Marketing and Office software.</p>
@@ -17,7 +17,7 @@
         <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4">
           <div class="flex-wrap flex-md-nowrap align-items-center justify-content-center">
             <div class="box">
-              <h1>Program</h1>
+              <h1 class="content-title font font-weight-normal">Program</h1>
               <a
                 href="#"
                 @click.prevent="openPhot(1)"
@@ -29,7 +29,7 @@
             </div>
 
             <div class="box">
-              <h1>Design</h1>
+              <h1 class="content-title font font-weight-normal">Design</h1>
               <a href="#" @click.prevent="openPhoto(2)" data-toggle="modal"
                 data-target="#skillModal2">
                 <img :src="img2" alt="img-2" class="box-img">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="box">
-              <h1>Marketing</h1>
+              <h1 class="content-title font font-weight-normal">Marketing</h1>
               <a href="#" @click.prevent="openPhoto(3)" data-toggle="modal"
                 data-target="#skillModal3">
                 <img :src="img3" alt="img-3" class="box-img">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="box">
-              <h1>Office Software</h1>
+              <h1 class="content-title font font-weight-normal">Office Software</h1>
               <a href="#" @click.prevent="openPhoto(4)" data-toggle="modal"
                 data-target="#skillModal4">
                 <img :src="img4" alt="img-4" class="box-img">
@@ -68,7 +68,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="skillModalLabel">Program</h5>
+            <h5 class="modal-title font" id="skillModalLabel">Program</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -99,7 +99,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="skillModalLabel">Design</h5>
+            <h5 class="modal-title font" id="skillModalLabel">Design</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -130,7 +130,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="skillModalLabel">Marketing</h5>
+            <h5 class="modal-title font" id="skillModalLabel">Marketing</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -160,7 +160,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="skillModalLabel">Office software</h5>
+            <h5 class="modal-title font" id="skillModalLabel">Office software</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -182,10 +182,12 @@
 </template>
 
 <style lang="scss" scoped>
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
+html {
+  font-size: 15px;
+}
+
+.font {
+  font-family: Noto, sans;
 }
 
 /*
@@ -227,7 +229,7 @@
 .sidebar-text {
   color: white;
   font-size: 1.1rem;
-  width: 20rem;
+  width: 14rem;
   font-weight: lighter;
   font-family: Noto, sans;
 }
@@ -281,9 +283,11 @@
 
 .box {
   text-align: center;
-  margin-bottom: 6vw;
+  margin-bottom: 5rem;
 }
-
+.content-title{
+  margin-bottom: 1.5rem;
+}
 .box-img {
   text-align: center;
   // border: #707070 1px solid;
@@ -298,9 +302,9 @@
 .modal-img {
   text-align: center;
   float: left;
-  width: 10vw;
-  height: 10vw;
-  padding:2vw;
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
