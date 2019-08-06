@@ -6,7 +6,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-text">Portfolio</h1>
+              <h1 class="sidebar-title">Portfolio</h1>
               <p
                 class="sidebar-text"
               >Here are my works.</p>
@@ -108,10 +108,18 @@
   justify-content: center;
   align-items: center;
 }
+.sidebar-title {
+  font-size: 4rem;
+  color: white;
+  font-weight: lighter;
+  font-family: Noto, sans;
+}
 
 .sidebar-text {
   color: white;
-  width: 15vw;
+  font-size: 1.1rem;
+  width: 14rem;
+  font-weight: lighter;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {

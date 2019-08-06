@@ -7,7 +7,7 @@
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
-              <h1 class="sidebar-tiltle font font-weight-light">Education</h1>
+              <h1 class="sidebar-title font">Education</h1>
 
               <p class="sidebar-text font font-weight-light">Here is about my education, ability and certificate.</p>
             </div>
@@ -170,13 +170,14 @@ html {
 .sidebar-text {
   color: white;
   font-size: 1.1rem;
-  width: 15rem;
+  width: 17rem;
   font-weight: lighter;
 }
 
-.sidebar-tiltle {
-  font-size: 3rem;
+.sidebar-title {
+  font-size: 4rem;
   color: white;
+  font-weight: lighter;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {

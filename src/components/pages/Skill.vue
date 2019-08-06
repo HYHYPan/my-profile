@@ -17,7 +17,7 @@
         <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4">
           <div class="flex-wrap flex-md-nowrap align-items-center justify-content-center">
             <div class="box">
-              <h1 class="content-title font font-weight-normal">Program</h1>
+              <h1 class="content-title font font-weight-normal">Front end</h1>
               <a
                 href="#"
                 @click.prevent="openPhot(1)"
@@ -220,7 +220,7 @@ html {
 }
 
 .sidebar-title {
-  font-size: 4vw;
+  font-size: 4rem;
   color: white;
   font-weight: lighter;
   font-family: Noto, sans;
