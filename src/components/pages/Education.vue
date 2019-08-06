@@ -169,8 +169,9 @@ html {
 
 .sidebar-text {
   color: white;
-  font-size: 1rem;
-  width: 15vw;
+  font-size: 1.1rem;
+  width: 15rem;
+  font-weight: lighter;
 }
 
 .sidebar-tiltle {
