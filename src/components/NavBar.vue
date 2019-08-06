@@ -17,8 +17,6 @@
           </li>
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/portfolio')">Portfolio</a>
           </li>
-          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/login')">Login</a>
-          </li>
         </ul>
         <!-- @media screen and (max-width: 1023px) -->
         
@@ -31,8 +29,6 @@
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/skill')">Skills</a>
           </li>
           <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/portfolio')">Portfolio</a>
-          </li>
-          <li><a class="nav-link nav-item font" href="#" @click.prevent="getToPage('/login')">Login</a>
           </li>
         </ul>
 

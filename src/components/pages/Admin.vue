@@ -171,7 +171,7 @@
 
 <script>
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/SideBar";
+// import Footer from "@/components/SideBar";
 
 export default {
   name: "Home",
