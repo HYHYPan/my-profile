@@ -252,8 +252,8 @@ html {
 export default {
   data() {
     return {
-      img1: "static/images/head-1.png",
-      img2: "static/images/head-2.jpg",
+      img1: "static/images/About/head.jpg",
+      img2: "static/images/About/head-2.jpg",
       
     };
   }
