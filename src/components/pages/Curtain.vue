@@ -5,9 +5,9 @@
     <transition name="zoom">
       <nav class="d-flex col-md-11 d-md-block sidebar" v-if="change">
         <div class="sidebar-sticky col-md-12">
-          <div class="sidebar-box-left col-md-4 ml-1">
-            <h1 class="sidebar-title font ml-2">Hazel Pan</h1>
-            <p class="sidebar-text font mt-4 ml-5">
+          <div class="sidebar-box-left col-md-4 ml-3">
+            <h1 class="sidebar-title font ">Hazel Pan</h1>
+            <p class="sidebar-text font mt-4 ">
               “ Life is a great big canvas, and you should throw all the paint on if you can ”
               - Danny Kaye
             </p>
@@ -80,24 +80,7 @@ html {
   text-align: right;
 }
 
-.sidebar-title {
-  color: white;
-  font-weight: lighter;
-  font-size: 4rem;
-  margin: 0rem;
-}
 
-.sidebar-text {
-  justify-content: center;
-  text-align: center;
-  color: white;
-  font-size: 1.1rem;
-  width: 20rem;
-  line-height: 1.5rem;
-  font-weight: lighter;
-  margin-left: 0rem;
-  margin-right: 0rem;
-}
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
@@ -123,6 +106,50 @@ html {
 .sidebar .nav-link:hover .feather,
 .sidebar .nav-link.active .feather {
   color: inherit;
+}
+
+@media (min-width: 768px){
+  .sidebar-title {
+  color: white;
+  font-weight: lighter;
+  font-size: 4rem;
+  margin: 0rem;
+}
+
+.sidebar-text {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  width: 20rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+  // margin-left: 3rem;
+  // margin-right: 0rem;
+  display: inline-block;
+}
+}
+
+@media (max-width: 767px){
+  .sidebar-title {
+  color: white;
+  font-weight: lighter;
+  font-size: 3rem;
+  margin: 0rem;
+}
+
+.sidebar-text {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  width: 15rem; 
+  line-height: 1.5rem;
+  font-weight: lighter;
+  // margin-left: 1.5rem;
+  // margin-right: 0rem;
+  display: inline-block;
+}
 }
 
 // The transition
