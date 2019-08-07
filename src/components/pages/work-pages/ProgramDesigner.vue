@@ -139,7 +139,7 @@ html {
   float: left;
   width: 60%;
   padding: 0% 3%;
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
 }
 }
 /*
