@@ -9,7 +9,7 @@
             <div class="sidebar-box">
               <h1 class="sidebar-title font">Education</h1>
 
-              <p class="sidebar-text font font-weight-light">Here is about my education, ability and certificate.</p>
+              <p class="sidebar-text font font-weight-light">This is about my education, ability and certificate.</p>
             </div>
           </div>
         </nav>

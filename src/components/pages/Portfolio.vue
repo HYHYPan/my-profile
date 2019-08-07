@@ -1,43 +1,65 @@
 <template>
-    <div>
-      <div class="container-fluid">
+  <div>
+    <div class="container-fluid">
       <div class="row">
-         <!-- SideBar -->
+        <!-- SideBar -->
         <nav class="col-md-4 d-none d-md-block sidebar">
           <div class="sidebar-sticky">
             <div class="sidebar-box">
               <h1 class="sidebar-title">Portfolio</h1>
-              <p
-                class="sidebar-text"
-              >Here are my works.</p>
+              <p class="sidebar-text">Here are my portfolio and creative works.</p>
             </div>
           </div>
         </nav>
 
-        <main role="main" class="col-md-8 ml-sm-auto col-lg-8 px-4">
-          <div class=" flex-wrap flex-md-nowrap align-items-center justify-content-center">
-            <div class="box">
+        <main role="main" class="col-md-8 ml-sm-auto col-lg-8">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap box">
+            <!-- <div class="box"> -->
 
-            <div class="box-content" >
-              <a href="#" @click.prevent="openPhoto()" data-toggle="modal"
-                data-target="#portfolioModal" v-for="item in portfolio1" :key="item">
+            <div class="box-content">
+              <a
+                href="#portfolioModal"
+                @click="openPhoto()"
+                data-toggle="modal"
+                data-target="#portfolioModal"
+                v-for="item in portfolio1"
+                :key="item"
+              >
                 <img :src="item.img" alt="img" class="box-img">
               </a>
             </div>
 
-            <div class="box-content" >
-              <a href="#" @click.prevent="openPhoto()" data-toggle="modal"
-                data-target="#portfolioModal" v-for="item in portfolio2" :key="item">
+            <div class="box-content">
+              <a
+                href="#portfolioModal"
+                @click.prevent="openPhoto()"
+                data-toggle="modal"
+                data-target="#portfolioModal"
+                v-for="item in portfolio2"
+                :key="item"
+              >
                 <img :src="item.img" alt="img" class="box-img">
               </a>
             </div>
 
+            <div class="box-content2">
+              <a
+                href="#portfolioModal"
+                @click.prevent="openPhoto()"
+                data-toggle="modal"
+                data-target="#portfolioModal"
+                v-for="item in carousel"
+                :key="item"
+              >
+                <img :src="item.img" alt="img" class="box-img">
+              </a>
             </div>
           </div>
+          <!-- </div> -->
         </main>
       </div>
     </div>
-    
+
     <!-- Modal -->
     <div
       class="modal fade"
@@ -56,25 +78,46 @@
             </button>
           </div>
           <div class="modal-body">
-            <!-- <div class="modal-box" v-for="item in officeSoftware" :key="item">
-              <img :src="item.img" alt="img" class="modal-img">
-            </div> -->
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="modal-box carousel-item active">
+                  <img :src="img1" alt="img" class="modal-img d-block w-100">
+                </div>
+                <div class="modal-box carousel-item" v-for="item in carousel" :key="item">
+                  <img :src="item.img" class="modal-img d-block w-100">
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          
           </div>
         </div>
       </div>
     </div>
-  
-
-        
-    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-   .feather {
+.feather {
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
@@ -120,6 +163,7 @@
   font-size: 1.1rem;
   width: 14rem;
   font-weight: lighter;
+  font-family: Noto, sans;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -166,27 +210,57 @@
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 48px; /* Space for fixed navbar */
-    padding-right: 4vw;
-    padding-left: 4vw;
+    padding: 2rem 4rem; /* Space for fixed navbar */
+  }
+  .box-content {
+    text-align: center;
+    width: 40%;
+    float: left;
+    margin: 5%;
+  }
+  .box-content2 {
+    display: none;
   }
 }
 
-// .box {
- 
-// }
+@media (max-width: 767px) {
+  [role="main"] {
+    padding: 0rem; /* Space for fixed navbar */
+  }
+  .box-content {
+    display: none;
+  }
 
-.box-content {
-  text-align: center;
-  width: 35%;
-  float: left;
-  margin: 3vw;
+  .box-content2 {
+    text-align: center;
+    width: 70%;
+    float: left;
+    margin: 15%;
+  }
 }
 
 .box-img {
   text-align: center;
   width: 100%;
-  margin: 2vw;
+  margin-bottom: 3rem;
+}
+/*
+ * modal
+ */
+.modal-box {
+  overflow: auto;
+}
+#carouselExampleControls {
+  text-align: center;
+  height: 100%;
+  overflow: auto;
+  margin: 0rem;
+  align-items: center;
+}
+.modal-img {
+  width: auto;
+  height: auto;
+  overflow: auto;
 }
 </style>
 
@@ -196,36 +270,56 @@ import $ from "jquery";
 export default {
   name: "Portfolio",
   data() {
-  return {
-    portfolio1: [
-        {img:"static/images/Portfolio/13.png"},
-        {img:"static/images/Portfolio/1.png"},
-        {img:"static/images/Portfolio/3.jpg"},
-        {img:"static/images/Portfolio/5.jpg"},
-        {img:"static/images/Portfolio/7.jpg"},
-        {img:"static/images/Portfolio/9.jpg"},
-        {img:"static/images/Portfolio/11.jpg"},
-        
+    return {
+      img1: "static/images/Portfolio/18.jpg",
+      portfolio1: [
+        { img: "static/images/Portfolio/18.jpg" },
+        { img: "static/images/Portfolio/7.jpg" },
+        { img: "static/images/Portfolio/8.jpg" },
+        { img: "static/images/Portfolio/9.jpg" },
+        { img: "static/images/Portfolio/11.jpg" },
+        { img: "static/images/Portfolio/1.png" },
+        { img: "static/images/Portfolio/21.png" },
+        { img: "static/images/Portfolio/2.jpg" },
+        { img: "static/images/Portfolio/15.png" },
+        { img: "static/images/Portfolio/14.png" }
       ],
-    portfolio2: [
-      {img:"static/images/Portfolio/14.png"},
-      {img:"static/images/Portfolio/15.png"},
-        {img:"static/images/Portfolio/4.png"},
-        {img:"static/images/Portfolio/6.jpg"},
-        {img:"static/images/Portfolio/2.jpg"},
-        {img:"static/images/Portfolio/8.jpg"},
-        {img:"static/images/Portfolio/10.jpg"},
-        {img:"static/images/Portfolio/12.jpg"},
-        
+      portfolio2: [
+        { img: "static/images/Portfolio/12.jpg" },
+        { img: "static/images/Portfolio/20.jpg" },
+        { img: "static/images/Portfolio/6.jpg" },
+        { img: "static/images/Portfolio/10.jpg" },
+        { img: "static/images/Portfolio/16.jpg" },
+        { img: "static/images/Portfolio/4.png" },
+        { img: "static/images/Portfolio/3.jpg" },
+        { img: "static/images/Portfolio/13.png" }
       ],
+      carousel: [
+        { img: "static/images/Portfolio/18.jpg" },
+        { img: "static/images/Portfolio/12.jpg" },
+        { img: "static/images/Portfolio/7.jpg" },
+        { img: "static/images/Portfolio/20.jpg" },
+        { img: "static/images/Portfolio/8.jpg" },
+        { img: "static/images/Portfolio/6.jpg" },
+        { img: "static/images/Portfolio/9.jpg" },
+        { img: "static/images/Portfolio/10.jpg" },
+        { img: "static/images/Portfolio/11.jpg" },
+        { img: "static/images/Portfolio/16.jpg" },
+        { img: "static/images/Portfolio/1.png" },
+        { img: "static/images/Portfolio/4.png" },
+        { img: "static/images/Portfolio/21.png" },
+        { img: "static/images/Portfolio/3.jpg" },
+        { img: "static/images/Portfolio/2.jpg" },
+        { img: "static/images/Portfolio/13.png" },
+        { img: "static/images/Portfolio/15.png" },
+        { img: "static/images/Portfolio/14.png" }
+      ]
+    };
+  },
+  methods: {
+    openPhoto() {
+      $("#portfolioModal").modal("show");
+    }
   }
-  },
-   methods: {
-      openPhoto(num) {
-        $("#portfolioModal").modal("show");
-     
-  },
-},
-
-}
+};
 </script>
