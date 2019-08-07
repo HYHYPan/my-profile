@@ -140,7 +140,7 @@ html {
 
 .text {
   text-align: left;
-  padding-top: 1rem ;
+  padding: 1rem 0rem ;
 }
 
 @media (min-width: 768px) {
@@ -165,7 +165,7 @@ align-items: center;
 
 .content-box {
   position: relative;
-  height: 80vh;
+  height: 100%;
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
