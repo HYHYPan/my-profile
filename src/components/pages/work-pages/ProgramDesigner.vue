@@ -18,8 +18,8 @@
         <p>July.2018 - Dec.2018 (temp worker)</p>
 
         <ul>
-          <li>Design the programs of interior system.</li>
-          <li>Fix the system issues.</li>
+          <li>Engaged in designing, modifying the programs of interior system.</li>
+          <li>Built and implemented the new project into system.</li>
           <li>Improve the programs and functions based on users’ feedbacks.</li>
         </ul>
       </div>
