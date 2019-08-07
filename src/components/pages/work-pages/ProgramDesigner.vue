@@ -1,6 +1,6 @@
 <template>
   
-    <div class="content-box d-flex">
+    <div class="content-box d-flex ">
       <!-- <div class="main-image d-flex"> -->
         <img class=" main-image" :src="mainImage" alt="Main image">
       <!-- </div> -->
@@ -17,7 +17,7 @@
         <p>BNP PARIBAS CARDIF</p>
         <p>July.2018 - Dec.2018 (temp worker)</p>
 
-        <ul>
+        <ul >
           <li>Engaged in designing, modifying the programs of interior system.</li>
           <li>Built and implemented the new project into system.</li>
           <li>Improve the programs and functions based on users’ feedbacks.</li>
@@ -96,12 +96,7 @@ html {
   font-size: 2rem;
 }
 
-.text-box {
-  text-align: left;
-  float: left;
-  width: 50%;
-  padding: 0% 3%;
-}
+
 
 .content-btn{
   border-radius: 50rem;
@@ -119,18 +114,32 @@ html {
   justify-content: center;
   align-items: center;
 }
+.text-box {
+  text-align: left;
+  float: left;
+  width: 50%;
+  padding: 0% 3%;
+}
   }
 
 @media (max-width: 767px) {
   .content-box{
   position: relative;
-  height: 80vh;
+  height: 100%;
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   display: flex;
   justify-content: center;
   align-items: center;
+   
+}
+.text-box {
+  text-align: left;
+  float: left;
+  width: 60%;
+  padding: 0% 3%;
+  margin-bottom: 2rem;
 }
 }
 /*
