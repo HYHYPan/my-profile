@@ -15,11 +15,12 @@
       </div>
       
         <div class="text">
-          <p>SAYA Network Co., Ltd</p>
-          <p>Jul.2015 - Dec.2017</p>
+          <p>Essen patent & trademark office</p>
+          <p>Apr. 2014 - May. 2015</p>
           <ul>
-            <li>Facebook Ads Account Manager：Managed, optimized and analyzing Facebook Ads.</li>
-            <li>LINE@ Account Manager：In charge of LINE@ and LINE@ market affairs.</li>
+            <li>Be responsible for client’s application of patent and trademark, led patent agents to finish works on time, coordinated subagents and clients to resolve application issues, and carried out the every steps of application thoroughly.</li>
+            
+<li>Acquired the professional knowledge about international laws and regulations of patent and trademark</li>
           </ul>
         </div>
       <!-- </div> -->
